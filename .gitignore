@@ -1,0 +1,9 @@
+artefacts/
+__pycache__
+.DS_Store
+.vscode/
+logs/
+.ipynb_checkpoints/
+.Rhistory
+.RData
+hg19-tss-centered-10kb-10species.mc9nr.feather
