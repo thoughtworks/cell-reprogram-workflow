@@ -4,7 +4,7 @@
 from src.tool.transsynw_tool import runTranssynW
 
 
-def transsynw(artefacts_path, *args):
+def generate_hypothesis(artefacts_path, *args):
     print(args)
     STARTDATA=args[0]
     COMPLETEDATA=args[1]

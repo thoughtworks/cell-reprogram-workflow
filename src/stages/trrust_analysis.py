@@ -8,8 +8,8 @@ import numpy as np
 
 def read_trrust_db(db_file):
     trrust_data = pd.read_table(db_file ,header=None)
-    trrust_data.columns =['Gene', 'Target', 'Action', 'Refrence']
-    return trrust_data.drop(['Refrence'],axis = 1)
+    trrust_data.columns =['Gene', 'Target', 'Action', 'Reference']
+    return trrust_data.drop(['Reference'],axis = 1)
 
 def combine_transync_outputs(cores_file, marker_file, target_genes_file):
     transync = pd.read_table(cores_file)

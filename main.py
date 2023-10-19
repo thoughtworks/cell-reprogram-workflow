@@ -6,11 +6,11 @@ from src.stages.mechanistic_insights import mechanistic_insights
 from src.stages.grn_inference import grn_inference
 from src.stages.trrust_analysis import trrust_analysis, combine_transync_outputs
 from src.stages.generate_network import generate_network
-from src.stages.generate_hypothesis import transsynw
+from src.stages.generate_hypothesis import generate_hypothesis
 
 def run_all(artefacts_path, *args):
     TERDATA = args[5]
-    TRRUST_DB_FILE = args[5] or "./trrust_rawdata_human.tsv"
+    TRRUST_DB_FILE = args[6] or "./trrust_rawdata_human.tsv"
 
     mechanistic_insights(artefacts_path, *args)
     grn_inference(artefacts_path=artefacts_path, ter_data=TERDATA)
@@ -25,7 +25,7 @@ def main():
     
     if stage_name == "generate_hypothesis":
         params = sys.argv[6:]
-        transsynw(artefacts_path, *params)
+        generate_hypothesis(artefacts_path, *params)
     elif stage_name == "mechanistic_insights":
         params = sys.argv[6:]
         mechanistic_insights(artefacts_path, *params)
@@ -36,7 +36,7 @@ def main():
         trrust_db_file = sys.argv[6]
         trrust_analysis(trrust_db_file, artefacts_path)
     elif stage_name == "generate_network":
-         trrust_analysis_out = sys.argv[6]
+         trrust_analysis_out = sys.argv[7]
          generate_network(trrust_analysis_out)
     elif stage_name == "functional_analysis":
          start_uniprot(artefacts_path)

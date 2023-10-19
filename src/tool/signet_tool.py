@@ -4,8 +4,8 @@ import subprocess
 import os
 import sys
 
-from src.tool.SIGNET import signet
-code_path = './src/tool/Signet'
+from dependencies.Signet.SIGNET import signet
+code_path = 'dependencies/Signet'
 
 def runSignetpy(artefacts_path, ter_data):
     signet_out_path = artefacts_path + '/Signet/Intermediate'
