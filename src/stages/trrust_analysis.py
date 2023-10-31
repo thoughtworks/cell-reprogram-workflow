@@ -1,10 +1,13 @@
 "trrust_analysis.py"
 import pandas as pd
 import numpy as np
+import os
 
 ###
 # Depends upon TransSyncW and SIGNET
 ###
+
+
 
 def read_trrust_db(db_file):
     trrust_data = pd.read_table(db_file ,header=None)
@@ -43,12 +46,13 @@ def analyse(trust_db, transync_combined, signet_reformed, artefacts_path):
     
     trrust_analysis = [trrust_transsynw_gene_match,trrust_transsynw_target_match,trrust_signet_gene_match,trrust_signet_target_match]
     tdata = pd.concat(trrust_analysis)
-    tdata.to_csv(artefacts_path + "/trrust_analysis.csv", index=False)
+    tdata.to_csv(artefacts_path + "/Trrust_Analysis/trrust_analysis.csv", index=False)
     return tdata
 
 def trrust_analysis(trust_db_file, artefacts_path):
+    os.mkdir(artefacts_path+"/Trrust_Analysis")
     print("RUNNING TRRUST_analysis with params", trust_db_file, artefacts_path)
-
+    
     cores_file= artefacts_path+"/TransSynW/cores.tsv"
     markers_file = artefacts_path+"/TransSynW/markers.tsv"
     signet_file = artefacts_path+"/Signet/copaired2.csv"

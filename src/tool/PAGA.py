@@ -40,7 +40,7 @@ def paga(*args):
     adata = generate_anndata(annotation_file, TRANSPOSED_FILE_PATH)
 
     sc.pp.normalize_total(adata)
-    sc.tl.pca(adata, svd_solver='arpack',n_comps = 50)
+    sc.tl.pca(adata, svd_solver='arpack')#,n_comps = 50)
     #sc.pl.pca_variance_ratio(adata, show = False, save = "PCA_var.png")
 
     sc.pp.neighbors(adata, n_neighbors=15, n_pcs=11)
