@@ -4,15 +4,16 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as pl
 import scanpy as sc
+data_path = "./data/"
 
 def transpose_start_terminal_gene_exp(gene_exp_file, transpose_target_file):
-    gene_exp = pd.read_table(gene_exp_file)
+    gene_exp = pd.read_table(data_path + gene_exp_file)
     gene_exp = gene_exp.transpose()
     gene_exp.to_csv(transpose_target_file, header=False)
     
 
 def get_cell_types(annotation_file):
-    annotations = pd.read_table(annotation_file)
+    annotations = pd.read_table(data_path + annotation_file)
     annotations.transpose()
     return annotations.iloc[0,:]
 
@@ -65,6 +66,7 @@ def paga(*args):
 
     sc.tl.draw_graph(adata, init_pos='paga')
     sc.pl.draw_graph(adata, color=['CellType'], legend_loc='on data', save = "Clusters.png",show = False)
+    
     print("The starting cells are: ", start)
     adata.uns['iroot'] = np.flatnonzero(adata.obs['CellType']  == start)[0]
 
@@ -81,7 +83,10 @@ def paga(*args):
     sc.pp.log1p(adata)
     sc.pp.scale(adata)
 
+   
+    
     core = pd.read_table(outdir+"/TransSynW/cores.tsv")
+    core['Gene'] = core['Gene'].str.upper()
     sg = core[core['core']=='specific']['Gene'].to_list()
     pg = core[core['core']=='pioneer']['Gene'].to_list()
 

@@ -4,10 +4,10 @@ import pytest
 import shutil
 import os
 import filecmp
-from src.stages.functional_analysis import start_uniprot
+from src.stages.functional_analysis import start_uniprot_transyn,start_uniprot_signet
 
 artefacts_path = "./test_dump"
-source_artefacts_path = "./tests/artefacts"
+source_artefacts_path = "./tests/example"
 
 def copy_dependencies():
     src = source_artefacts_path + '/Trrust_Analysis'
@@ -27,9 +27,11 @@ def setup():
 def test_should_match_generated_artefacts():
     setup()
     
-    start_uniprot(artefacts_path)
-    files_under_scrutiny = ['Uniprot_transsynw_analysis.csv']
+    start_uniprot_transyn(artefacts_path)
+    files_under_scrutiny = ['/Uniprot/transync/Uniprot_transsynw_analysis.csv' ]
+    start_uniprot_signet(artefacts_path)
+    files_under_scrutiny = ['/Uniprot/signet/Uniprot_signet_analysis.csv' ]
 
     for file in files_under_scrutiny:
-        file_path =  "/Uniprot/" + file
+        file_path = file
         assert filecmp.cmp(source_artefacts_path + file_path, artefacts_path + file_path) == True

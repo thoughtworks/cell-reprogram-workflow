@@ -5,13 +5,13 @@ import os
 import sys
 
 from dependencies.Signet.SIGNET import signet
-code_path = 'dependencies/Signet'
+code_path = '/Signet'
 
 def runSignetpy(artefacts_path, ter_data):
     signet_out_path = artefacts_path + '/Signet/Intermediate'
     os.makedirs(signet_out_path)
     
-    script = code_path+"/SIGNET.py"
+    script = "code/SIGNET.py"
     tf = code_path+"/tf_list.txt"
     sp = "Homo sapiens"
 

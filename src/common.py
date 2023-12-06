@@ -16,5 +16,4 @@ def http_post(url, **kwargs):
     return requests.post(url, **kwargs)
 
 
-# def unique_directory_name():
-#     return "Results-"+datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+

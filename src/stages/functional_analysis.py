@@ -32,27 +32,29 @@ def fetch_uniprots(job_ids):
 
     return pd.DataFrame(uni, columns=['Gene','Entry_type','Primary_acc','Function'])
 
-def save_uniprot_data(target, uniprots_dataframe):
-    os.mkdir(target+"/Uniprot")
-    uniprots_dataframe.to_csv(target+"/Uniprot/Uniprot_transsynw_analysis.csv", index= False)
+def save_uniprot_data_transyn(target, uniprots_dataframe):
+    os.makedirs(target+"/Uniprot/transync")
+    uniprots_dataframe.to_csv(target+"/Uniprot/transync/Uniprot_transsynw_analysis.csv", index= False)
+
+def save_uniprot_data_signet(target, uniprots_dataframe):
+    os.makedirs(target+"/Uniprot/signet")
+    uniprots_dataframe.to_csv(target+"/Uniprot/signet/Uniprot_signet_analysis.csv", index= False)
 
 
-def start_uniprot(artefacts_path):
-    print("RUNNING start_uniprot with params", artefacts_path)
+
+def start_uniprot_transyn(artefacts_path):
+    print("RUNNING start_uniprot for transyn data with params", artefacts_path)
     transync_genes_file = artefacts_path + "/Trrust_Analysis/transync_genes.csv"
     transsynw_genes = pd.read_csv(transync_genes_file)['Gene']
     jobs_ids = (get_jobs_ids(transsynw_genes))
-    save_uniprot_data(artefacts_path,fetch_uniprots(jobs_ids))
+    save_uniprot_data_transyn(artefacts_path,fetch_uniprots(jobs_ids))
 
-# def get_genes_file(artefacts_path):
-#     genes_file = artefacts_path + "/Trrust_Analysis/transync_genes.csv"
-#     genes = pd.read_csv(genes_file)['Gene']
-#     return genes
-    
-# def uniprot_search(artefacts_path,genes):
-#     # genes_file = artefacts_path + "/Trrust_Analysis/transync_genes.csv"
-#     # genes = pd.read_csv(genes_file)['Gene']
-#     jobs_ids = (get_jobs_ids(genes))
-#     save_uniprot_data(artefacts_path,fetch_uniprots(jobs_ids))
+def start_uniprot_signet(artefacts_path):
+    print("RUNNING start_uniprot for signet data with params", artefacts_path)
+    signet_file = artefacts_path + "/Trrust_Analysis/signet_unique_gene_list.csv"
+    signet_genes = pd.read_csv(signet_file)['Gene']
+    jobs_ids = (get_jobs_ids(signet_genes))
+    save_uniprot_data_signet(artefacts_path,fetch_uniprots(jobs_ids))
+
 
 
