@@ -1,6 +1,3 @@
-# clone tr to some folder
-# cd, run 
-
 
 mkdir ./deps
 git clone --depth=1 https://gitlab.lcsb.uni.lu/CBG/transsynw.git ./deps/transsynw
