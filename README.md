@@ -20,10 +20,10 @@ Eg: python main.py run functional_analysis --artefacts ./artefacts/Results-2023-
 - stage: gene network (Cytoscape)
 Eg: python main.py run generate_network --artefacts ./artefacts/Results-2023-10-03_12-39-19 --params ./artefacts/Results-2023-10-03_12-39-19/trrust_analysis.csv
 
--stage: trrust analysis (TRRUST)
+- stage: trrust analysis (TRRUST)
 Eg: python main.py run trrust_analysis --artefacts ./artefacts/Results-2023-10-03_12-39-19 --params ./trrust_rawdata_human.tsv 
 
--stage: generate_hypothesis (TransSynW)
+- stage: generate_hypothesis (TransSynW)
 Eg: python main.py run generate_hypothesis --artefacts ./artefacts/temp2 --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES
 python main.py run generate_hypothesis --artefacts ${PWD}/artefacts/temp2 --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES
 
