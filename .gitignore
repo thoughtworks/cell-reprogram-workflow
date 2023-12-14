@@ -8,5 +8,7 @@ logs/
 .RData
 hg19-tss-centered-10kb-10species.mc9nr.feather
 test_dump
+code
+deps
 
 !tests/artefacts

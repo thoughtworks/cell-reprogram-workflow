@@ -18,9 +18,14 @@ Eg: python main.py run functional_analysis --artefacts ./artefacts/Results-2023-
 
 - stage: gene network (Cytoscape)
 Eg: python main.py run generate_network --artefacts ./artefacts/Results-2023-10-03_12-39-19 --params ./artefacts/Results-2023-10-03_12-39-19/trrust_analysis.csv
+Eg: python main.py run generate_network --artefacts ./artefacts/Results-2023-10-03_12-39-19 --params ./artefacts/Results-2023-10-03_12-39-19/Trrust_Analysis/trrust_analysis.csv Results_network
 
 -stage: trrust analysis (TRRUST)
 Eg: python main.py run trrust_analysis --artefacts ./artefacts/Results-2023-10-03_12-39-19 --params ./trrust_rawdata_human.tsv 
 
 -stage: generate_hypothesis (TransSynW)
 Eg: python main.py run generate_hypothesis --artefacts ./artefacts/temp2 --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES
+python main.py run generate_hypothesis --artefacts ${PWD}/artefacts/temp2 --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES
+
+setup file: downloads transsynw repo with code directory with the necessary codes
+cannot chnage the name as for transsynw to run the path cannot be changed. Adding signet.py also in the code repository under Signet directory so that the dependencies are in one single folder.

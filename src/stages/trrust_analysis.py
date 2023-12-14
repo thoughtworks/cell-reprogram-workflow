@@ -16,9 +16,9 @@ def read_trrust_db(db_file):
 
 def combine_transync_outputs(cores_file, marker_file, target_genes_file):
     transync = pd.read_table(cores_file)
-    transync.rename(columns = {'core':'Type'}, inplace = True)
+    transync.rename(columns = {'core':'Source'}, inplace = True)
     transynm = pd.read_table(marker_file)
-    transynm.insert(3, 'Type', 'marker')
+    transynm.insert(3, 'Source', 'marker')
     transync_genes = pd.concat([transync, transynm])
     transync_genes.to_csv(target_genes_file)
     return transync_genes
@@ -46,8 +46,12 @@ def analyse(trust_db, transync_combined, signet_reformed, artefacts_path):
     
     trrust_analysis = [trrust_transsynw_gene_match,trrust_transsynw_target_match,trrust_signet_gene_match,trrust_signet_target_match]
     tdata = pd.concat(trrust_analysis)
-    tdata.to_csv(artefacts_path + "/Trrust_Analysis/trrust_analysis.csv", index=False)
-    return tdata
+    omitted = unique_combined_data[ ~unique_combined_data['Gene'].isin(tdata['Gene']) ]
+    all_genes = [tdata,omitted]
+    all_analysed_genes = pd.concat(all_genes)
+    all_analysed_genes.fillna('No_data', inplace=True)
+    all_analysed_genes.to_csv(artefacts_path + "/Trrust_Analysis/trrust_analysis.csv", index=False)
+    return all_analysed_genes
 
 def trrust_analysis(trust_db_file, artefacts_path):
     os.mkdir(artefacts_path+"/Trrust_Analysis")
@@ -62,4 +66,5 @@ def trrust_analysis(trust_db_file, artefacts_path):
 
     return analyse(read_trrust_db(trust_db_file),
     combine_transync_outputs(cores_file, markers_file, target_genes_file),
-    reform_signet_output(signet_file,signet_unique_genes_file), artefacts_path)
+    reform_signet_output(signet_file,signet_unique_genes_file),
+    store_nohits(target_genes_file, signet_unique_genes_file), artefacts_path)

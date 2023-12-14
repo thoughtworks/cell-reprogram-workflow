@@ -22,12 +22,20 @@ def runTranssynW(*args):
 
     os.mkdir(OUTPUT_DIR)
     f = open(OUTPUT_DIR + "/output.txt", "w")
-  
-    data_dir_path = "./data/"
+    present_dir = os.getcwd()
+    data_dir_path = f"{abs_path}/../../data/"
+    script_path = f"{abs_path}/../../deps/transsynw/"
+    os.chdir(script_path)
     script = "code/SynergisticCore_noExpCutoff_sizeNormalization.R"
     command = "Rscript"
     command_args = [script, data_dir_path + INPUT_FILE, SUBPOPULATIONS, OUTPUT_DIR, data_dir_path + INPUT_FILE2, data_dir_path + STARTPOP, SPECIES, ORGNAME]
-    return subprocess.run((command, *command_args), stdout=f)
+    return_val = subprocess.run((command, *command_args), stdout=f)
+    os.chdir(present_dir)
+
+    return return_val
+
+
+
 
 
 

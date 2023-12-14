@@ -4,8 +4,8 @@
 from src.tool.transsynw_tool import runTranssynW
 
 
-def generate_hypothesis(artefacts_path, *args):
-    print(args)
+def generate_hypothesis(artefacts_path, *args, deps_root="."):
+    
     STARTDATA=args[0]
     COMPLETEDATA=args[1]
     ANNOTATION=args[2]
@@ -22,5 +22,6 @@ def generate_hypothesis(artefacts_path, *args):
         EMAIL,
         SPECIES,
         TEXT,
-        ARTEFACTS_PATH+"/TransSynW")
+        ARTEFACTS_PATH+"/TransSynW",
+        deps_root=deps_root)
     
