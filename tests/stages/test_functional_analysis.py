@@ -4,12 +4,17 @@ import pytest
 import shutil
 import os
 import filecmp
-from src.stages.functional_analysis import start_uniprot_transyn,start_uniprot_signet
+from craft.stages.functional_analysis import functional_analysis
+from craft.common import clean_up
+
+transsynw_genes_file = "/Trrust_Analysis/transsynw_genes.csv"
+signet_genes_file = "/Trrust_Analysis/signet_genes.csv"
 
 artefacts_path = "./test_dump"
 source_artefacts_path = "./tests/example"
 
 def copy_dependencies():
+
     src = source_artefacts_path + '/Trrust_Analysis'
     dest = artefacts_path + '/Trrust_Analysis'
     shutil.copytree(src, dest) 
@@ -19,18 +24,14 @@ def cleanup():
 
 def setup():
     cleanup()
-
     os.mkdir(artefacts_path)
-
     copy_dependencies()
 
 def test_should_match_generated_artefacts():
     setup()
     
-    start_uniprot_transyn(artefacts_path)
-    files_under_scrutiny = ['/Uniprot/transync/Uniprot_transsynw_analysis.csv' ]
-    start_uniprot_signet(artefacts_path)
-    files_under_scrutiny = ['/Uniprot/signet/Uniprot_signet_analysis.csv' ]
+    functional_analysis(artefacts_path,transsynw_genes_file, signet_genes_file)
+    files_under_scrutiny = ['/Uniprot/uniprot_signet_genes.csv','/Uniprot/uniprot_transsynw_genes.csv' ]
 
     for file in files_under_scrutiny:
         file_path = file

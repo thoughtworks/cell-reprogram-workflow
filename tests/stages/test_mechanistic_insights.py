@@ -4,10 +4,10 @@ import filecmp
 import os
 import shutil
 import glob
-from src.stages.mechanistic_insights import mechanistic_insights
+from craft.stages.mechanistic_insights import mechanistic_insights
 
 args = ["start.txt","start_terminal.txt","annotation.txt","HPROGFPM", "HNES"]
-artefacts_path = "./test_dump"
+artefacts_path = os.getcwd() + "/" +  "./test_dump"
 source_artefacts_path = "./tests/artefacts"
 
 def cleanup():

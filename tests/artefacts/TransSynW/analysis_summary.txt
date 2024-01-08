@@ -1,0 +1,5 @@
+Starting cell type: start.txt
+Gene expression matrix: start_terminal.txt
+Cluster file: annotation.txt
+Species: Human
+Analysed subpopulations: HPROGFPM
