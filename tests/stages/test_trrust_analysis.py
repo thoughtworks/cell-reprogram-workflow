@@ -4,9 +4,9 @@ import pytest
 import shutil
 import os
 import filecmp
-from src.stages.trrust_analysis import trrust_analysis
+from craft.stages.trrust_analysis import trrust_analysis
 
-trrust_db_file = "./trrust_rawdata_human.tsv"
+trrust_db_file = "./data/trrust_rawdata_human.tsv"
 artefacts_path = "./test_dump"
 source_artefacts_path = "./tests/artefacts"
 
@@ -32,7 +32,7 @@ def test_should_match_generated_artefacts():
     setup()
 
     trrust_analysis(trrust_db_file, artefacts_path)
-    files_under_scrutiny = ["trrust_analysis.csv", "transync_genes.csv", "signet_unique_gene_list.csv" ]
+    files_under_scrutiny = ["trrust_analysis.csv", "transsynw_genes.csv", "signet_genes.csv" ]
 
     for file in files_under_scrutiny:
         file_path =  "/Trrust_Analysis/" + file

@@ -1,0 +1,39 @@
+[1] "HPROGFPM"
+[1] ""
+[1] "Human"
+[1] "start_terminal.txt" "annotation.txt"     "start.txt"         
+[1] 993 370
+[1] "HNES"     "HPROGFPM"
+[1] "HPROGFPM"
+[1] "============================"
+[1] "/Users/avani_mahadik/Desktop/Pipeline/Creating_methods/artefacts/temp5/TransSynW"
+[1] "/Users/avani_mahadik/miniconda3/envs/new_env/lib/python3.9/site-packages/craft/dependencies/transsynw"
+[1] "============================"
+[1] "length GEN:"
+[1] 300
+[1] "Running C++ JSD..."
+    OTX2    LMX1A   DMRTA2     MSX1     HEY1     NFIA   BCL11A    LMX1B 
+16.00000 19.00000 57.00000 61.43023 62.75532 63.82627 67.00000 69.66370 
+     JUN    ASCL1 
+69.83960 71.85416 
+[1] "PBX1" "SOX2" "SOX9"
+[1] "Running C++ computeMMI..."
+starting c++ part
+>0
+>1
+[1] FALSE
+[1] "PBX1" "SOX2" "SOX9"
+starting c++ compute_MMI_finalCombis...
+starting c++ compute_MMI_finalCombis...
+starting c++ compute_MMI_finalCombis...
+starting c++ compute_MMI_finalCombis...
+starting c++ compute_MMI_finalCombis...
+starting c++ compute_MMI_finalCombis...
+starting c++ compute_MMI_finalCombis...
+starting c++ compute_MMI_finalCombis...
+starting c++ compute_MMI_finalCombis...
+starting c++ compute_MMI_finalCombis...
+[1] "OTX2"   "LMX1A"  "DMRTA2" "MSX1"   "HEY1"   "PBX1"   "SOX2"   "SOX9"  
+[1] ">Marker computation"
+[1] 4338  370
+[1] "Running C++ JSD..."
