@@ -10,10 +10,6 @@ from PIL import Image
 from sklearn.model_selection import train_test_split
 import argparse
 import os
-import random
-import torch
-torch.manual_seed(42)
-random.seed(42)
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--n_epochs', type=int, default=30, help='Number of Epochs for training SIGNET')
@@ -468,4 +464,3 @@ if __name__ == "__main__":
     
     
     
-print("signet_py_done!")
