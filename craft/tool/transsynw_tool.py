@@ -1,12 +1,16 @@
 "transsynw_tool.py"
 
+import logging
 import subprocess
 import os
-
+import sys
+from craft.common import clean_up
+cwd = os.getcwd()
+print("cwd:", cwd)
+abs_path = os.path.dirname(__file__)
+print("abs_path", abs_path)
 
 def runTranssynW(*args):
-    print("RUNNING TransSynW with params-", args)
-    
     STARTPOP=args[0]
     INPUT_FILE=args[1]
     INPUT_FILE2=args[2]
@@ -15,16 +19,18 @@ def runTranssynW(*args):
     SPECIES=args[5]
     ORGNAME=args[6]
     OUTPUT_DIR=args[7]
-
+    
     
     os.environ["CPATH"]="/opt/homebrew/Cellar/boost/1.81.0_1/include"
     os.environ["LIBRARY_PATH"]="/opt/homebrew/lib"
-
+    clean_up(OUTPUT_DIR)
     os.mkdir(OUTPUT_DIR)
     f = open(OUTPUT_DIR + "/output.txt", "w")
     present_dir = os.getcwd()
-    data_dir_path = f"{abs_path}/../../data/"
-    script_path = f"{abs_path}/../../deps/transsynw/"
+    data_dir_path = f"{cwd}/data/"
+    print("data_path", data_dir_path)
+    script_path = f"{abs_path}/../dependencies/transsynw/"
+    print("script_path", script_path)
     os.chdir(script_path)
     script = "code/SynergisticCore_noExpCutoff_sizeNormalization.R"
     command = "Rscript"

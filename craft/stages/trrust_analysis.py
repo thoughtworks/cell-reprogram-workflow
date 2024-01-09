@@ -2,11 +2,20 @@
 import pandas as pd
 import numpy as np
 import os
+from craft.common import clean_up
+import logging
+
 
 ###
 # Depends upon TransSyncW and SIGNET
 ###
 
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+file_handler = logging.FileHandler('logs.log')
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
 
 
 def read_trrust_db(db_file):
@@ -29,11 +38,22 @@ def reform_signet_output(signet_out_file, signet_unique_genes_file):
     tg = signet['V2']
     signet_data = pd.concat([tf,tg])
     signet_unique_genes = pd.DataFrame((signet_data.unique()),columns=['Gene'])
+    signet_unique_genes['Source']="SIGNET"
     signet_unique_genes.to_csv(signet_unique_genes_file,index=False)
     return pd.DataFrame(signet_data,columns=['Gene'])
 
+def store_nohits(target_genes_file, signet_unique_genes_file):
+    transync_genes = pd.read_csv(target_genes_file)
+    transync_genes = transync_genes[['Gene','Source']]
+    signet_unique_genes = pd.read_csv(signet_unique_genes_file)
+    combine=[transync_genes,signet_unique_genes]
+    combined_data = pd.concat(combine)
+    unique_combined_data = combined_data.drop_duplicates()
+    
+    return unique_combined_data
 
-def analyse(trust_db, transync_combined, signet_reformed, artefacts_path): 
+
+def analyse(trust_db, transync_combined, signet_reformed,unique_combined_data, artefacts_path): 
     trrust_transsynw_gene_match=trust_db[trust_db['Gene'].isin(transync_combined['Gene'])]
     trrust_transsynw_gene_match['Source']='TranSyn'
     trrust_transsynw_target_match=trust_db[trust_db['Target'].isin(transync_combined['Gene'])]
@@ -54,14 +74,15 @@ def analyse(trust_db, transync_combined, signet_reformed, artefacts_path):
     return all_analysed_genes
 
 def trrust_analysis(trust_db_file, artefacts_path):
+    clean_up(artefacts_path+"/Trrust_Analysis")
     os.mkdir(artefacts_path+"/Trrust_Analysis")
-    print("RUNNING TRRUST_analysis with params", trust_db_file, artefacts_path)
+    logger.info(f"RUNNING TRRUST_analysis with using: {trust_db_file, artefacts_path}")
     
     cores_file= artefacts_path+"/TransSynW/cores.tsv"
     markers_file = artefacts_path+"/TransSynW/markers.tsv"
     signet_file = artefacts_path+"/Signet/copaired2.csv"
-    target_genes_file = artefacts_path+"/Trrust_Analysis/transync_genes.csv"
-    signet_unique_genes_file = artefacts_path+"/Trrust_Analysis/signet_unique_gene_list.csv"
+    target_genes_file = artefacts_path+"/Trrust_Analysis/transsynw_genes.csv"
+    signet_unique_genes_file = artefacts_path+"/Trrust_Analysis/signet_genes.csv"
     
 
     return analyse(read_trrust_db(trust_db_file),

@@ -1,10 +1,21 @@
 "mechanistic_insights.py"
 
-from src.tool.transsynw_tool import runTranssynW
-from src.tool.paga_tool import runPaga
+
+from craft.tool.transsynw_tool import runTranssynW
+from craft.tool.paga_tool import runPaga
+
+import logging
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+file_handler = logging.FileHandler('logs.log')
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
 
 def mechanistic_insights(artefacts_path, *args):
-    print("RUNNING stage 'mechanistic_insights' with params-", args)
+
+    logger.info(f"Obtaining mechanistic insights using: '{args}")
 
     STARTDATA=args[0]
     COMPLETEDATA=args[1]

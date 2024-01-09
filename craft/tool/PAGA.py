@@ -2,9 +2,18 @@
 
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as pl
 import scanpy as sc
+import logging
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+file_handler = logging.FileHandler('logs.log')
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
+
 data_path = "./data/"
+
 
 def transpose_start_terminal_gene_exp(gene_exp_file, transpose_target_file):
     gene_exp = pd.read_table(data_path + gene_exp_file)
@@ -32,8 +41,10 @@ def paga(*args):
 
     ## sc parameters config
     
-    sc.set_figure_params(scanpy=True, frameon=False, figsize =(6,6),vector_friendly=True, fontsize=18, color_map=None, format='png', facecolor=None, transparent=False, ipython_format='png2x')
+    sc.set_figure_params(scanpy=True, frameon=False, figsize =(6,6),vector_friendly=True, fontsize=18, color_map=None, format='png', facecolor=None, transparent=False, ipython_format='png2x', dpi_save=int(300))
     sc.settings.figdir = outdir + "/PAGA/"
+    sc.set_figure_params(dpi_save = int(300))
+    
 
     TRANSPOSED_FILE_PATH = outdir + "/transposed_data.csv"
 
@@ -67,7 +78,8 @@ def paga(*args):
     sc.tl.draw_graph(adata, init_pos='paga')
     sc.pl.draw_graph(adata, color=['CellType'], legend_loc='on data', save = "Clusters.png",show = False)
     
-    print("The starting cells are: ", start)
+    
+    logger.info(f"The starting cells are: {start}")
     adata.uns['iroot'] = np.flatnonzero(adata.obs['CellType']  == start)[0]
 
 
@@ -105,5 +117,5 @@ def paga(*args):
     sc.pl.paga(adata, color=['CellType','louvain','dpt_pseudotime'], show = False, save = "Comparision_2.png")
 
 
-    print("PAGA analysis done!!!")
+    logger.debug("PAGA analysis done!!!")
  
