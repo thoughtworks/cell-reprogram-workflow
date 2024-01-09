@@ -11,6 +11,11 @@ test_dump
 code
 deps
 craft/dependencies
-data
+CRAFT.egg-info
+logs.log
+build/
+_build/
+__pycache__
+.pytest_cache
 
 !tests/artefacts
