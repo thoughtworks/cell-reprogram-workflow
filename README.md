@@ -25,36 +25,42 @@ Eg: terminal.csv
 The starting cell population and terminal cell population cluster IDs to be enerted as parameters should match the one in the annotations files.
 
 
-*Commands*
-- stage: all (TransSynW + PAGA + SIGNET + TRRUST + Cytoscape + Uniprot)
+**Commands**
+- <u>stage</u>: all (TransSynW + PAGA + SIGNET + TRRUST + Cytoscape + Uniprot)
+##
 craft run all --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID] [startaing cell cluster ID] ./data/terminal.csv ./data/trrust_rawdata_human.tsv
 
 Eg: craft run all --artefacts ./artefacts/temp --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES ./data/terminal.csv ./data/trrust_rawdata_human.tsv
 
--stage: generate_hypothesis (TransSynW)
+- stage</u>: generate_hypothesis (TransSynW)
+##
 craft run all --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID]
 
 Eg: craft run generate_hypothesis --artefacts ./artefacts/[directory_name] --params start.txt start_terminal.txt annotation.txt HPROGFPM
 
-- stage: mechanistic insights (TransSynW + PAGA)
+- <u>stage: mechanistic insights (TransSynW + PAGA)
+##
 craft run all --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID] [startaing cell cluster ID]
 
 Eg: craft run mechanistic_insights --artefacts ./artefacts/temp --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES
 
-- stage: grn inference (SIGNET)
+- <u>stage: grn inference (SIGNET)
+##
 craft run grn_inference --artefacts ./artefacts/[directory_name] --params ./data/terminal.csv
 Eg: craft run grn_inference --artefacts ./artefacts/temp --params ./data/terminal.csv
 
-- stage: functional analysis (Uniprot)
+- <u>stage: functional analysis (Uniprot)
+##
 craft run functional_analysis --artefacts ./artefacts/[directory_name] transync_genes.csv signet_unique_gene_list.csv
 Eg: craft run functional_analysis --artefacts ./artefacts/temp transync_genes.csv signet_unique_gene_list.csv
 
-- stage: gene network (Cytoscape)
+- <u>stage: gene network (Cytoscape)
+##
 craft run generate_network --artefacts ./artefacts/[directory_name] --params ./artefacts/[directory_name]/Trrust_Analysis/trrust_analysis.csv
 
 Eg: craft run generate_network --artefacts ./artefacts/temp --params ./artefacts/temp/Trrust_Analysis/trrust_analysis.csv 
 
--stage: trrust analysis (TRRUST)
+- <u>stage</u>: trrust analysis (TRRUST)
+##
 craft run trrust_analysis --artefacts ./artefacts/[directory_name] --params ./data/trrust_rawdata_human.tsv
 Eg: craft run trrust_analysis --artefacts ./artefacts/temp --params ./data/trrust_rawdata_human.tsv 
-
