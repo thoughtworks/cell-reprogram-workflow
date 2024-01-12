@@ -1,6 +1,9 @@
-setup.sh file: User needs to run this file to start. This file downloads the dependencies and runs the pip installation of craft. 
-artefacts: Directory provided by user, where all the results would be saved.
-stage: Part of the tool user wants to run.
+setup.sh file: User needs to run this file to start. This file downloads the dependencies and runs the pip installation of craft.  
+
+artefacts: Directory provided by user, where all the results would be saved.  
+
+stage: Part of the tool user wants to run.  
+
 params: Input arguments required by the stage.
 
 python version used: 3.9
@@ -26,34 +29,43 @@ The starting cell population and terminal cell population cluster IDs to be ener
 
 
 **Commands**
-<u>stage</u>: all (TransSynW + PAGA + SIGNET + TRRUST + Cytoscape + Uniprot)
-#craft run all --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID] [startaing cell cluster ID] ./data/terminal.csv ./data/trrust_rawdata_human.tsv
+- stage: all (TransSynW + PAGA + SIGNET + TRRUST + Cytoscape + Uniprot)  
+
+craft run all --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID] [startaing cell cluster ID] ./data/terminal.csv ./data/trrust_rawdata_human.tsv  
 
 Eg: craft run all --artefacts ./artefacts/temp --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES ./data/terminal.csv ./data/trrust_rawdata_human.tsv
 
-<u>stage</u>: generate_hypothesis (TransSynW)
-# craft run all --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID]
+- stage: generate_hypothesis (TransSynW)  
+
+craft run generate_hypothesis --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID]
 
 Eg: craft run generate_hypothesis --artefacts ./artefacts/[directory_name] --params start.txt start_terminal.txt annotation.txt HPROGFPM
 
-<u>stage</u>: mechanistic insights (TransSynW + PAGA)
-# craft run all --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID] [startaing cell cluster ID]
+- stage: mechanistic insights (TransSynW + PAGA)  
+
+craft run mechanistic insights --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID] [startaing cell cluster ID]
 
 Eg: craft run mechanistic_insights --artefacts ./artefacts/temp --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES
 
-<u>stage</u>: grn inference (SIGNET)
-# craft run grn_inference --artefacts ./artefacts/[directory_name] --params ./data/terminal.csv
+- stage: grn inference (SIGNET)  
+
+craft run grn_inference --artefacts ./artefacts/[directory_name] --params ./data/terminal.csv  
+
 Eg: craft run grn_inference --artefacts ./artefacts/temp --params ./data/terminal.csv
 
-<u>stage</u>: functional analysis (Uniprot)
-# craft run functional_analysis --artefacts ./artefacts/[directory_name] transync_genes.csv signet_unique_gene_list.csv
+- stage: functional analysis (Uniprot)  
+
+craft run functional_analysis --artefacts ./artefacts/[directory_name] transync_genes.csv signet_unique_gene_list.csv  
+
 Eg: craft run functional_analysis --artefacts ./artefacts/temp transync_genes.csv signet_unique_gene_list.csv
 
-<u>stage</u>: gene network (Cytoscape)
-# craft run generate_network --artefacts ./artefacts/[directory_name] --params ./artefacts/[directory_name]/Trrust_Analysis/trrust_analysis.csv
+- stage: gene network (Cytoscape)  
+
+craft run generate_network --artefacts ./artefacts/[directory_name] --params ./artefacts/[directory_name]/Trrust_Analysis/trrust_analysis.csv
 
 Eg: craft run generate_network --artefacts ./artefacts/temp --params ./artefacts/temp/Trrust_Analysis/trrust_analysis.csv 
 
-<u>stage</u>: trrust analysis (TRRUST)
-# craft run trrust_analysis --artefacts ./artefacts/[directory_name] --params ./data/trrust_rawdata_human.tsv
+- stage: trrust analysis (TRRUST)  
+
+craft run trrust_analysis --artefacts ./artefacts/[directory_name] --params ./data/trrust_rawdata_human.tsv
 Eg: craft run trrust_analysis --artefacts ./artefacts/temp --params ./data/trrust_rawdata_human.tsv 
