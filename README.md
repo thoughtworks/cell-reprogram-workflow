@@ -7,8 +7,11 @@ stage: Part of the tool user wants to run.
 params: Input arguments required by the stage.
 
 python version used: 3.9
-Cytoscape version recommended: 3.9.1. Cytoscape needs to open in the background while running the workflow.
-PathLinker app to be added to cytoscape using App manager in the software.
+
+Cytoscape version recommended: 3.9.1. Cytoscape needs to open in the background while running the workflow.  
+
+PathLinker app to be added to cytoscape using App manager in the software.  
+
 R requirements: 
 libraries in rstudio: reshape2, umap, pheatmap, igraph ,GGally, ggplot2 >= 3.3.0 ,RcisTarget ,AUCell ,RcisTarget
 
