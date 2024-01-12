@@ -1,19 +1,25 @@
-setup.sh file: User needs to run this file to start. This file downloads the dependencies and runs the pip installation of craft.  
+### CRAFT: Cellular Reprogramming Analysis with Integrated Framework and Mechanistic Insight
+A framework created using already available tools and databases, to perform cellular reprogramming computationally. 
+To carry out tool specific task using the various tools available seperately, the reserachers need to go through the tools individually. CRAFT ease their work by integrating the tools at one place.
+With this integration of the functionalities reserachers can invest time in biological inferences and experimentally verifying the key modulators and their effects.
 
-artefacts: Directory provided by user, where all the results would be saved.  
 
-stage: Part of the tool user wants to run.  
+setup.sh file: User needs to run this file to start. This file downloads the dependencies and runs the pip installation of craft. 
 
-params: Input arguments required by the stage.
+<u>artefacts</u>: Directory provided by user, where all the results would be saved.  
 
-python version used: 3.9
+<u>stage</u>: Part of the tool user wants to run.  
 
+<u>params</u>: Input arguments required by the stage.
+
+
+Python version used: Python 3.9
+Rstudio cersion used: R version 4.2.2
 Cytoscape version recommended: 3.9.1. Cytoscape needs to open in the background while running the workflow.  
-
 PathLinker app to be added to cytoscape using App manager in the software.  
 
-R requirements: 
-libraries in rstudio: reshape2, umap, pheatmap, igraph ,GGally, ggplot2 >= 3.3.0 ,RcisTarget ,AUCell ,RcisTarget
+##### R requirements: 
+Libraries required in rstudio: reshape2, umap, pheatmap, igraph, GGally, ggplot2 >= 3.3.0 ,RcisTarget, AUCell, RcisTarget
 
 All the input files should be saved in a folder called data.
 Inputs files user needs to create:
@@ -32,43 +38,44 @@ The starting cell population and terminal cell population cluster IDs to be ener
 
 
 **Commands**
-- stage: all (TransSynW + PAGA + SIGNET + TRRUST + Cytoscape + Uniprot)  
+- <u>stage</u>: all (TransSynW + PAGA + SIGNET + TRRUST + Cytoscape + Uniprot)  
 
-craft run all --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID] [startaing cell cluster ID] ./data/terminal.csv ./data/trrust_rawdata_human.tsv  
+    craft run all --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID] [startaing cell cluster ID] ./data/terminal.csv ./data/trrust_rawdata_human.tsv  
 
-Eg: craft run all --artefacts ./artefacts/temp --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES ./data/terminal.csv ./data/trrust_rawdata_human.tsv
+    Eg: craft run all --artefacts ./artefacts/temp --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES ./data/terminal.csv ./data/trrust_rawdata_human.tsv
 
-- stage: generate_hypothesis (TransSynW)  
+- <u>stage</u>: generate_hypothesis (TransSynW)  
 
-craft run generate_hypothesis --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID]
+    craft run generate_hypothesis --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID]
 
-Eg: craft run generate_hypothesis --artefacts ./artefacts/[directory_name] --params start.txt start_terminal.txt annotation.txt HPROGFPM
+    Eg: craft run generate_hypothesis --artefacts ./artefacts/[directory_name] --params start.txt start_terminal.txt annotation.txt HPROGFPM
 
-- stage: mechanistic insights (TransSynW + PAGA)  
+- <u>stage</u>: mechanistic insights (TransSynW + PAGA)  
 
-craft run mechanistic insights --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID] [startaing cell cluster ID]
+    craft run mechanistic insights --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID] [startaing cell cluster ID]
 
-Eg: craft run mechanistic_insights --artefacts ./artefacts/temp --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES
+    Eg: craft run mechanistic_insights --artefacts ./artefacts/temp --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES
 
-- stage: grn inference (SIGNET)  
+- <u>stage</u>: grn inference (SIGNET)  
 
-craft run grn_inference --artefacts ./artefacts/[directory_name] --params ./data/terminal.csv  
+    craft run grn_inference --artefacts ./artefacts/[directory_name] --params ./data/terminal.csv  
 
-Eg: craft run grn_inference --artefacts ./artefacts/temp --params ./data/terminal.csv
+    Eg: craft run grn_inference --artefacts ./artefacts/temp --params ./data/terminal.csv
 
-- stage: functional analysis (Uniprot)  
+- <u>stage</u>: functional analysis (Uniprot)  
 
-craft run functional_analysis --artefacts ./artefacts/[directory_name] transync_genes.csv signet_unique_gene_list.csv  
+    craft run functional_analysis --artefacts ./artefacts/[directory_name] transync_genes.csv signet_unique_gene_list.csv  
 
-Eg: craft run functional_analysis --artefacts ./artefacts/temp transync_genes.csv signet_unique_gene_list.csv
+    Eg: craft run functional_analysis --artefacts ./artefacts/temp transync_genes.csv signet_unique_gene_list.csv
 
-- stage: gene network (Cytoscape)  
+- <u>stage</u>: gene network (Cytoscape)  
 
-craft run generate_network --artefacts ./artefacts/[directory_name] --params ./artefacts/[directory_name]/Trrust_Analysis/trrust_analysis.csv
+    craft run generate_network --artefacts ./artefacts/[directory_name] --params ./artefacts/[directory_name]/Trrust_Analysis/trrust_analysis.csv
 
-Eg: craft run generate_network --artefacts ./artefacts/temp --params ./artefacts/temp/Trrust_Analysis/trrust_analysis.csv 
+    Eg: craft run generate_network --artefacts ./artefacts/temp --params ./artefacts/temp/Trrust_Analysis/trrust_analysis.csv 
 
-- stage: trrust analysis (TRRUST)  
+- <u>stage</u>: trrust analysis (TRRUST)  
 
-craft run trrust_analysis --artefacts ./artefacts/[directory_name] --params ./data/trrust_rawdata_human.tsv
-Eg: craft run trrust_analysis --artefacts ./artefacts/temp --params ./data/trrust_rawdata_human.tsv 
+    craft run trrust_analysis --artefacts ./artefacts/[directory_name] --params ./data/trrust_rawdata_human.tsv
+
+    Eg: craft run trrust_analysis --artefacts ./artefacts/temp --params ./data/trrust_rawdata_human.tsv 
