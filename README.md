@@ -1,7 +1,7 @@
 ### CRAFT: Cellular Reprogramming Analysis with Integrated Framework and Mechanistic Insight
 A framework created using already available tools and databases, to perform cellular reprogramming computationally. 
-To carry out tool specific task using the various tools available seperately, the reserachers need to go through the tools individually. CRAFT ease their work by integrating the tools at one place.
-With this integration of the functionalities reserachers can invest time in biological inferences and experimentally verifying the key modulators and their effects.
+To carry out tool specific task using the various tools available separately, the researchers need to go through the tools individually. CRAFT ease their work by integrating the tools at one place.
+With this integration of the functionalities researchers can invest time in biological inferences and experimentally verifying the key modulators and their effects.
 
 
 setup.sh file: User needs to run this file to start. This file downloads the dependencies and runs the pip installation of craft. 
