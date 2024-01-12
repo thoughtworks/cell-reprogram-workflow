@@ -14,8 +14,11 @@ setup.sh file: User needs to run this file to start. This file downloads the dep
 
 
 Python version used: Python 3.9
+
 Rstudio cersion used: R version 4.2.2
+
 Cytoscape version recommended: 3.9.1. Cytoscape needs to open in the background while running the workflow.  
+
 PathLinker app to be added to cytoscape using App manager in the software.  
 
 ##### R requirements: 
