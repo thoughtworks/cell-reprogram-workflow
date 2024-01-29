@@ -1,10 +1,34 @@
+## Installation
+git clone --depth 1 git@github.com:Avani7/Pipeline.git pipeline
+<!-- `curl https://raw.githubusercontent.com/Avani7/Pipeline/main/setup_git.sh | bash` -->
+
 ### CRAFT: Cellular Reprogramming Analysis with Integrated Framework and Mechanistic Insight
 A framework created using already available tools and databases, to perform cellular reprogramming computationally. 
 To carry out tool specific task using the various tools available separately, the researchers need to go through the tools individually. CRAFT ease their work by integrating the tools at one place.
 With this integration of the functionalities researchers can invest time in biological inferences and experimentally verifying the key modulators and their effects.
 
+#### Rstudio version used: R version 4.2.2
+#### R requirements
+Use this command ro install R requirements
+install.packages(c("gtools","Matrix", "nibble","dplyr","stringr","purrr","Rcpp","reshape2","umap","pheatmap", "igraph","GGally","ggplot2","RcisTarget","AUCell"))
 
-setup.sh file: User needs to run this file to start. This file downloads the dependencies and runs the pip installation of craft. 
+<!-- setup.sh file: User needs to run this file to start. This file downloads the dependencies and runs the pip installation of craft.  -->
+
+
+#### Python version used: Python 3.9
+#### Cytoscape version recommended: 3.9.1. Cytoscape needs to open in the background while running the workflow.  
+#### PathLinker app to be added to cytoscape using App manager in the software.  
+#### boost (Collection of portable C++ source libraries): brew install boost
+User needs to define the CAPTH and LD_LIBRARY_PATH
+###### For M1 users:
+###### CAPTH = /opt/homebrew/include
+###### LD_LIBRARY_PATH = /opt/homebrew/lib
+
+###### For Intel users:
+###### CAPTH =/usr/local/include
+###### LD_LIBRARY_PATH =/usr/local/lib
+
+
 
 <u>artefacts</u>: Directory provided by user, where all the results would be saved.  
 
@@ -12,17 +36,6 @@ setup.sh file: User needs to run this file to start. This file downloads the dep
 
 <u>params</u>: Input arguments required by the stage.
 
-
-Python version used: Python 3.9
-
-Rstudio cersion used: R version 4.2.2
-
-Cytoscape version recommended: 3.9.1. Cytoscape needs to open in the background while running the workflow.  
-
-PathLinker app to be added to cytoscape using App manager in the software.  
-
-##### R requirements: 
-Libraries required in rstudio: reshape2, umap, pheatmap, igraph, GGally, ggplot2 >= 3.3.0 ,RcisTarget, AUCell, RcisTarget
 
 All the input files should be saved in a folder called data.
 Inputs files user needs to create:
