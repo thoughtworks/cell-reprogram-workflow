@@ -1,13 +1,15 @@
-## Installation
-git clone --depth 1 git@github.com:Avani7/Pipeline.git pipeline
-<!-- `curl https://raw.githubusercontent.com/Avani7/Pipeline/main/setup_git.sh | bash` -->
 
-<hr>
 
 ### CRAFT: Cellular Reprogramming Analysis with Integrated Framework and Mechanistic Insight
 A framework created using already available tools and databases, to perform cellular reprogramming computationally. 
 To carry out tool specific task using the various tools available separately, the researchers need to go through the tools individually. CRAFT ease their work by integrating the tools at one place.
 With this integration of the functionalities researchers can invest time in biological inferences and experimentally verifying the key modulators and their effects.
+
+<hr>
+
+## Installation
+git clone --depth 1 git@github.com:Avani7/Pipeline.git pipeline
+<!-- `curl https://raw.githubusercontent.com/Avani7/Pipeline/main/setup_git.sh | bash` -->
 
 <hr>
 
