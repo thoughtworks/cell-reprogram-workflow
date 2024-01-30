@@ -11,98 +11,89 @@ Project-URL: Documentation,
 Project-URL: Source, 
 Project-URL: Tracker, 
 Description-Content-Type: text/markdown
-Requires-Dist: anndata==0.10.3
-Requires-Dist: array-api-compat==1.4
-Requires-Dist: backoff==2.2.1
-Requires-Dist: certifi==2023.11.17
-Requires-Dist: chardet==5.2.0
-Requires-Dist: charset-normalizer==3.3.2
-Requires-Dist: colorbrewer==0.2.0
-Requires-Dist: colour==0.1.5
-Requires-Dist: contourpy==1.2.0
-Requires-Dist: cycler==0.12.1
-Requires-Dist: decorator==5.1.1
-Requires-Dist: exceptiongroup==1.2.0
-Requires-Dist: filelock==3.13.1
-Requires-Dist: fonttools==4.47.0
-Requires-Dist: fsspec==2023.12.2
-Requires-Dist: get-annotations==0.1.2
-Requires-Dist: h5py==3.10.0
-Requires-Dist: idna==3.6
-Requires-Dist: igraph==0.10.8
-Requires-Dist: importlib-resources==6.1.1
-Requires-Dist: Jinja2==3.1.2
-Requires-Dist: joblib==1.3.2
-Requires-Dist: kiwisolver==1.4.5
-Requires-Dist: llvmlite==0.41.1
-Requires-Dist: louvain==0.8.1
-Requires-Dist: MarkupSafe==2.1.3
-Requires-Dist: matplotlib==3.8.2
-Requires-Dist: mpmath==1.3.0
-Requires-Dist: natsort==8.4.0
-Requires-Dist: networkx==3.2.1
-Requires-Dist: numba==0.58.1
-Requires-Dist: numpy==1.26.2
-Requires-Dist: packaging==23.2
-Requires-Dist: pandas==2.0.3
-Requires-Dist: patsy==0.5.5
-Requires-Dist: Pillow==10.1.0
-Requires-Dist: py4cytoscape==1.9.0
-Requires-Dist: pynndescent==0.5.11
-Requires-Dist: pyparsing==3.1.1
-Requires-Dist: python-dateutil==2.8.2
-Requires-Dist: pytz==2023.3.post1
-Requires-Dist: requests==2.31.0
-Requires-Dist: scanpy==1.9.6
-Requires-Dist: scikit-learn==1.3.2
-Requires-Dist: scipy==1.11.4
-Requires-Dist: seaborn==0.12.2
-Requires-Dist: session-info==1.0.0
-Requires-Dist: six==1.16.0
-Requires-Dist: statsmodels==0.14.1
-Requires-Dist: stdlib-list==0.10.0
-Requires-Dist: sympy==1.12
-Requires-Dist: texttable==1.7.0
-Requires-Dist: threadpoolctl==3.2.0
-Requires-Dist: torch==2.1.2
-Requires-Dist: tqdm==4.66.1
-Requires-Dist: typing_extensions==4.9.0
-Requires-Dist: tzdata==2023.3
-Requires-Dist: umap-learn==0.5.5
-Requires-Dist: urllib3==2.1.0
-Requires-Dist: zipp==3.17.0
-Requires-Dist: pandas==2.0.3
-Requires-Dist: scanpy==1.9.6
+License-File: LICENSE
 
-artefacts: Directory provided by user, where all the results would be saved.
-stage: Part of the tool user wants to run.
-params: Input arguments required by the stage.
+### CRAFT: Cellular Reprogramming Analysis with Integrated Framework and Mechanistic Insight
+A framework created using already available tools and databases, to perform cellular reprogramming computationally. 
+To carry out tool specific task using the various tools available separately, the researchers need to go through the tools individually. CRAFT ease their work by integrating the tools at one place.
+With this integration of the functionalities researchers can invest time in biological inferences and experimentally verifying the key modulators and their effects.
 
 
-*Commands*
-- stage: all (TransSynW + PAGA + SIGNET + TRRUST + Cytoscape + Uniprot)
-Eg: python main.py run all --artefacts ./artefacts/temp2 --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES ./Signet/terminal.csv ./trrust_rawdata_human.tsv
+setup.sh file: User needs to run this file to start. This file downloads the dependencies and runs the pip installation of craft. 
 
-- stage: mechanistic insights (TransSynW + PAGA)
-Eg: python main.py run mechanistic_insights --artefacts ./artefacts/temp2 --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES
+<u>artefacts</u>: Directory provided by user, where all the results would be saved.  
 
-- stage: grn inference (SIGNET)
-Eg: python main.py run grn_inference --artefacts ./artefacts/temp --params ./Signet/terminal.csv
+<u>stage</u>: Part of the tool user wants to run.  
 
-- stage: functional analysis (Uniprot)
-Eg: python main.py run functional_analysis --artefacts ./artefacts/Results-2023-10-03_12-39-19
-python main.py run functional_analysis --artefacts ./artefacts/stage_all_hffxprog transync_genes.csv signet_unique_gene_list.csv
+<u>params</u>: Input arguments required by the stage.
 
-- stage: gene network (Cytoscape)
-Eg: python main.py run generate_network --artefacts ./artefacts/Results-2023-10-03_12-39-19 --params ./artefacts/Results-2023-10-03_12-39-19/trrust_analysis.csv
-Eg: python main.py run generate_network --artefacts ./artefacts/Results-2023-10-03_12-39-19 --params ./artefacts/Results-2023-10-03_12-39-19/Trrust_Analysis/trrust_analysis.csv 
 
--stage: trrust analysis (TRRUST)
-Eg: python main.py run trrust_analysis --artefacts ./artefacts/Results-2023-10-03_12-39-19 --params ./trrust_rawdata_human.tsv 
+Python version used: Python 3.9
 
--stage: generate_hypothesis (TransSynW)
-Eg: python main.py run generate_hypothesis --artefacts ./artefacts/temp2 --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES
-python main.py run generate_hypothesis --artefacts ${PWD}/artefacts/temp2 --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES
+Rstudio cersion used: R version 4.2.2
 
-setup file: downloads transsynw repo with code directory with the necessary codes
-cannot chnage the name as for transsynw to run the path cannot be changed. Adding signet.py also in the code repository under Signet directory so that the dependencies are in one single folder.
+Cytoscape version recommended: 3.9.1. Cytoscape needs to open in the background while running the workflow.  
+
+PathLinker app to be added to cytoscape using App manager in the software.  
+
+##### R requirements: 
+Libraries required in rstudio: reshape2, umap, pheatmap, igraph, GGally, ggplot2 >= 3.3.0 ,RcisTarget, AUCell, RcisTarget
+
+All the input files should be saved in a folder called data.
+Inputs files user needs to create:
+Gene expression files
+1. Starting cell population: create a .txt file with gene expression data of starting cell population. The rows should be gene names and columns should be sample IDs.
+Eg: start.txt
+2. Starting cell and terminal cell population combined: create a .txt file with gene expression data of both starting cell and terminal cell population. The rows should be gene names and columns should be sample IDs.
+Eg: start_terminal.txt
+![example start and terminal population combined](images/eg_start+ter_data_pic.png)
+3. Terminal cell population: create a .csv file with gene expression data of starting cell population. The rows should be gene names and columns should be sample IDs.
+Eg: terminal.csv
+4. annotation.txt: create a .txt file with lable IDs of the samples from starting cell and terminal cell population combined expression data. First row being the sample IDS similar to the starting cell and terminal cell population combined file and second two should be the cluster IDs of the population. Also one of the sample ID and cluster ID should be matching.
+![example annotation image](images/eg_annotation_pic.png)
+
+The starting cell population and terminal cell population cluster IDs to be enerted as parameters should match the one in the annotations files.
+
+
+**Commands**
+- <u>stage</u>: all (TransSynW + PAGA + SIGNET + TRRUST + Cytoscape + Uniprot)  
+
+    craft run all --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID] [startaing cell cluster ID] ./data/terminal.csv ./data/trrust_rawdata_human.tsv  
+
+    Eg: craft run all --artefacts ./artefacts/temp --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES ./data/terminal.csv ./data/trrust_rawdata_human.tsv
+
+- <u>stage</u>: generate_hypothesis (TransSynW)  
+
+    craft run generate_hypothesis --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID]
+
+    Eg: craft run generate_hypothesis --artefacts ./artefacts/[directory_name] --params start.txt start_terminal.txt annotation.txt HPROGFPM
+
+- <u>stage</u>: mechanistic insights (TransSynW + PAGA)  
+
+    craft run mechanistic insights --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID] [startaing cell cluster ID]
+
+    Eg: craft run mechanistic_insights --artefacts ./artefacts/temp --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES
+
+- <u>stage</u>: grn inference (SIGNET)  
+
+    craft run grn_inference --artefacts ./artefacts/[directory_name] --params ./data/terminal.csv  
+
+    Eg: craft run grn_inference --artefacts ./artefacts/temp --params ./data/terminal.csv
+
+- <u>stage</u>: functional analysis (Uniprot)  
+
+    craft run functional_analysis --artefacts ./artefacts/[directory_name] transync_genes.csv signet_unique_gene_list.csv  
+
+    Eg: craft run functional_analysis --artefacts ./artefacts/temp transync_genes.csv signet_unique_gene_list.csv
+
+- <u>stage</u>: gene network (Cytoscape)  
+
+    craft run generate_network --artefacts ./artefacts/[directory_name] --params ./artefacts/[directory_name]/Trrust_Analysis/trrust_analysis.csv
+
+    Eg: craft run generate_network --artefacts ./artefacts/temp --params ./artefacts/temp/Trrust_Analysis/trrust_analysis.csv 
+
+- <u>stage</u>: trrust analysis (TRRUST)  
+
+    craft run trrust_analysis --artefacts ./artefacts/[directory_name] --params ./data/trrust_rawdata_human.tsv
+
+    Eg: craft run trrust_analysis --artefacts ./artefacts/temp --params ./data/trrust_rawdata_human.tsv 

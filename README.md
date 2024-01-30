@@ -12,18 +12,18 @@ With this integration of the functionalities researchers can invest time in biol
 <hr>
 
 ### Requirements
-#### Rstudio version used: R version 4.2.2
-#### R requirements
+#### 1. Rstudio version used: R version 4.2.2
+#### 2. R requirements
 Use this command ro install R requirements
 install.packages(c("gtools","Matrix", "nibble","dplyr","stringr","purrr","Rcpp","reshape2","umap","pheatmap", "igraph","GGally","ggplot2","RcisTarget","AUCell"))
 
 <!-- setup.sh file: User needs to run this file to start. This file downloads the dependencies and runs the pip installation of craft.  -->
 
 
-#### Python version used: Python 3.9
-#### Cytoscape version recommended: 3.9.1. Cytoscape needs to open in the background while running the workflow.  
-#### PathLinker app to be added to cytoscape using App manager in the software.  
-#### boost (Collection of portable C++ source libraries): brew install boost
+#### 3. Python version used: Python 3.9
+#### 4. Cytoscape version recommended: 3.9.1. Cytoscape needs to open in the background while running the workflow.  
+#### 5. PathLinker app to be added to cytoscape using App manager in the software.  
+#### 6. boost (Collection of portable C++ source libraries): brew install boost
 User needs to define the CAPTH and LD_LIBRARY_PATH
 ###### For M1 users:
 ###### CAPTH = /opt/homebrew/include
@@ -33,16 +33,16 @@ User needs to define the CAPTH and LD_LIBRARY_PATH
 ###### CAPTH =/usr/local/include
 ###### LD_LIBRARY_PATH =/usr/local/lib
 
-#### wget: brew install wget
+#### 7. wget: brew install wget
 
 <hr>
 
 ### Definitions
-<u>artefacts</u>: Directory provided by user, where all the results would be saved.  
+<u>1. artefacts</u>: Directory provided by user, where all the results would be saved.  
 
-<u>stage</u>: Part of the tool user wants to run.  
+<u>2. stage</u>: Part of the tool user wants to run.  
 
-<u>params</u>: Input arguments required by the stage.
+<u>3. params</u>: Input arguments required by the stage.
 
 <hr>
 
