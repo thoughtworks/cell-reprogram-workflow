@@ -29,7 +29,7 @@ install.packages(c("gtools","Matrix", "nibble","dplyr","stringr","purrr","Rcpp",
 User needs to define the CAPTH and LD_LIBRARY_PATH
 ###### For M1 users:
 ###### CAPTH = /opt/homebrew/include
-###### LD_LIBRARY_PATH = /opt/homebrew/lib
+###### LIBRARY_PATH = /opt/homebrew/lib
 
 ###### For Intel users:
 ###### CAPTH =/usr/local/include
