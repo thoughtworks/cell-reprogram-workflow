@@ -2,11 +2,16 @@
 git clone --depth 1 git@github.com:Avani7/Pipeline.git pipeline
 <!-- `curl https://raw.githubusercontent.com/Avani7/Pipeline/main/setup_git.sh | bash` -->
 
+<hr>
+
 ### CRAFT: Cellular Reprogramming Analysis with Integrated Framework and Mechanistic Insight
 A framework created using already available tools and databases, to perform cellular reprogramming computationally. 
 To carry out tool specific task using the various tools available separately, the researchers need to go through the tools individually. CRAFT ease their work by integrating the tools at one place.
 With this integration of the functionalities researchers can invest time in biological inferences and experimentally verifying the key modulators and their effects.
 
+<hr>
+
+### Requirements
 #### Rstudio version used: R version 4.2.2
 #### R requirements
 Use this command ro install R requirements
@@ -28,15 +33,20 @@ User needs to define the CAPTH and LD_LIBRARY_PATH
 ###### CAPTH =/usr/local/include
 ###### LD_LIBRARY_PATH =/usr/local/lib
 
+#### wget: brew install wget
 
+<hr>
 
+### Definitions
 <u>artefacts</u>: Directory provided by user, where all the results would be saved.  
 
 <u>stage</u>: Part of the tool user wants to run.  
 
 <u>params</u>: Input arguments required by the stage.
 
+<hr>
 
+### Input file preparation
 All the input files should be saved in a folder called data.
 Inputs files user needs to create:
 Gene expression files
@@ -52,8 +62,9 @@ Eg: terminal.csv
 
 The starting cell population and terminal cell population cluster IDs to be enerted as parameters should match the one in the annotations files.
 
+<hr>
 
-**Commands**
+### Commands
 - <u>stage</u>: all (TransSynW + PAGA + SIGNET + TRRUST + Cytoscape + Uniprot)  
 
     craft run all --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID] [startaing cell cluster ID] ./data/terminal.csv ./data/trrust_rawdata_human.tsv  

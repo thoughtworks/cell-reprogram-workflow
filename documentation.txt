@@ -1,6 +1,19 @@
+*R requirements*
+install.packages(c("gtools","Matrix", "nibble","dplyr","stringr","purrr","Rcpp","reshape2","umap","pheatmap", "igraph","GGally","ggplot2","RcisTarget","AUCell"))
+
 artefacts: Directory provided by user, where all the results would be saved.
 stage: Part of the tool user wants to run.
 params: Input arguments required by the stage.
+
+boost (Collection of portable C++ source libraries): brew install boost
+User need to define the CAPTH and LD_LIBRARY_PATH
+For M1 users
+CAPTH = /opt/homebrew/include
+LD_LIBRARY_PATH = /opt/homebrew/lib
+
+For Intel users
+CAPTH =/usr/local/include
+LD_LIBRARY_PATH =/usr/local/lib
 
 
 *Commands*
