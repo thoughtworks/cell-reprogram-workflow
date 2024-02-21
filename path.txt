@@ -1,0 +1,10 @@
+Boost paths to be defined by user
+if boost was installed using boost
+M1
+CAPTH = /opt/homebrew/include
+LIBRARY_PATH = /opt/homebrew/lib
+
+Intel
+CAPTH =/usr/local/include
+LD_LIBRARY_PATH =/usr/local/lib
+
