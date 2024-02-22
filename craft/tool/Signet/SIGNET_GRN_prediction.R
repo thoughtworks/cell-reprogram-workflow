@@ -24,7 +24,7 @@ source('./craft/tool/Signet/SIGNET.R')
 data("motifAnnotations_hgnc")
 
 # Import the motif databases for RcisTarget
-motifRankings <- importRankings('./craft/tool/Signet/hg19-tss-centered-10kb-10species.mc9nr.feather')
+motifRankings <- importRankings('./data/hg19-tss-centered-10kb-10species.mc9nr.feather')
 gene <- colnames(motifRankings)
 
 

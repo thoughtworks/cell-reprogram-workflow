@@ -5,7 +5,7 @@ import shutil
 import os
 import filecmp
 from craft.stages.grn_inference import runR
-from craft.common import clean_up
+# from craft.common import clean_up
 
 artefacts_path = "./test_dump"
 source_artefacts_path = "./tests/example"

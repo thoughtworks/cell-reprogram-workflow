@@ -2433,3 +2433,214 @@ Targets (Marker + Target genes: OTX2 LMX1A MSX1 DMRTA2 HEY1 SOX2 PBX1 SOX9 HES1 
 2024-02-21 12:06:07,084 - craft.tool.PAGA - INFO - The starting cells are: HNES
 2024-02-21 12:06:11,092 - craft.tool.PAGA - DEBUG - PAGA analysis done!!!
 2024-02-21 12:06:11,147 - craft.stages.trrust_analysis - INFO - RUNNING TRRUST_analysis with using: ('./data/trrust_rawdata_human.tsv', './test_dump')
+2024-02-21 14:59:29,042 - craft.stages.create_network - INFO - Creating  network using: ./test_dump/Trrust_analysis/trrust_analysis.csv
+2024-02-21 14:59:38,713 - craft.stages.create_network - DEBUG - Sources (TFs): OTX2 LMX1A MSX1 DMRTA2 HEY1 SOX2 PBX1 SOX9 HES1 MAFB BCL11A SOX11 ZBTB33 ING4 SMAD4
+Targets (Marker + Target genes: DDC NTN1 RND1 ELAVL4 PTPRO APCDD1 RPS19 LDHA PLOD2 EPHB2 RBM15B ATP6V1A PLXNA1 PPA1 ZNF22 FILIP1L TASP1 ENO1 SGPL1 RABGEF1
+2024-02-21 14:59:38,993 - craft.stages.create_network - DEBUG - Sources (TFs): POU4F2 RHO SEMA6A TUBB3 VIM AMH CIITA AR CDK4 CDKN1A GATA4 CEACAM1 COL11A2 COL2A1 DCC KLF4 MIA MITF NES PRAME RXFP2 SHH SOX10 GATA1 HSD3B2 MYCN DDC PTGS2 NTN1 ASCL1 RND1 CD4 ELAVL4 DBF4 PTPRO HTR1A APCDD1 MAP2 RPS19 PTEN LDHA PTGDS PLOD2 ANGPT1 EPHB2 ARL6IP5 BAX RBM15B BCL2 ATP6V1A CASP3 PLXNA1 CDKN1B PPA1 CXCL8 ZNF22 NGF FILIP1L NTRK1 TASP1 SKP2 SGPL1 SPP1 RABGEF1 TP53 ACTA2 CCND2 BMP2 AHR GATA6 APOC3 KDR BAMBI OCLN BGLAP PROX1 BTRC CGA CDKN2B DKK1 COL7A1 DLK1 DACH1 ZHX2 EPO AURKA FBXO32 BEST1 FSTL3 CCNG2 HP CDC25C POR DCT ATF1 RUNX1T1 HESX1 BTF3 SERPINE1 IGF1 SKIL IL6 SMAD7 PAX6 TGFB1 POU1F1 E2F1 TNC RBP3 UCP2 TYR ZFP36 HOXB1 HIF1A SPAST NANOG HSF1 PF4 SOX3 VCP ABCC3 ABCC6 MYC ASXL1 BMP4 CCND1 FGF4 ISL1 POU3F2 ITGA6 L1TD1 REL LHX3 MKI67 MMP3 NTRK3 PGA5 PLAC1 ENO1
+Targets (Marker + Target genes: OTX2 LMX1A MSX1 DMRTA2 HEY1 SOX2 PBX1 SOX9 HES1 MAFB BCL11A SOX11 ZBTB33 ING4 SMAD4
+2024-02-21 14:59:49,907 - craft.stages.create_network - INFO - Error thrown by p4cytoscape during merging of networks. The merged network is created in Cytoscape though!
+2024-02-21 14:59:54,998 - craft.stages.create_network - INFO - Network generated in Cytoscaoe software.
+2024-02-21 14:59:55,008 - craft.stages.functional_analysis - INFO - Functional analysis started using: ('./test_dump', '/Trrust_Analysis/transsynw_genes.csv')
+2024-02-21 15:00:13,044 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-21 15:00:13,045 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-21 15:00:13,045 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-21 15:00:13,045 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-21 15:00:13,045 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-21 15:00:20,003 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-21 15:00:27,008 - craft.stages.functional_analysis - INFO - Functional analysis started using: ('./test_dump', '/Trrust_Analysis/signet_genes.csv')
+2024-02-21 15:00:38,784 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-21 15:00:41,270 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-21 15:00:41,270 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-21 15:00:41,271 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-21 15:00:46,207 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-21 15:00:46,208 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-21 15:00:51,112 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-21 15:00:57,580 - craft.stages.generate_hypothesis - INFO - Generating hypothesis using: ('start.txt', 'start_terminal.txt', 'annotation.txt', 'HPROGFPM')
+2024-02-21 16:13:51,500 - craft.stages.mechanistic_insights - INFO - Obtaining mechanistic insights using: '('start.txt', 'start_terminal.txt', 'annotation.txt', 'HPROGFPM', 'HNES')
+2024-02-21 16:14:26,881 - craft.tool.PAGA - INFO - The starting cells are: HNES
+2024-02-21 16:14:30,909 - craft.tool.PAGA - DEBUG - PAGA analysis done!!!
+2024-02-21 16:14:30,965 - craft.stages.trrust_analysis - INFO - RUNNING TRRUST_analysis with using: ('./data/trrust_rawdata_human.tsv', './test_dump')
+2024-02-22 08:17:06,944 - craft.stages.create_network - INFO - Creating  network using: ./test_dump/Trrust_analysis/trrust_analysis.csv
+2024-02-22 08:17:34,967 - craft.stages.create_network - DEBUG - Sources (TFs): OTX2 LMX1A MSX1 DMRTA2 HEY1 SOX2 PBX1 SOX9 HES1 MAFB BCL11A SOX11 ZBTB33 ING4 SMAD4
+Targets (Marker + Target genes: DDC NTN1 RND1 ELAVL4 PTPRO APCDD1 RPS19 LDHA PLOD2 EPHB2 RBM15B ATP6V1A PLXNA1 PPA1 ZNF22 FILIP1L TASP1 ENO1 SGPL1 RABGEF1
+2024-02-22 08:17:40,480 - craft.stages.create_network - DEBUG - Sources (TFs): POU4F2 RHO SEMA6A TUBB3 VIM AMH CIITA AR CDK4 CDKN1A GATA4 CEACAM1 COL11A2 COL2A1 DCC KLF4 MIA MITF NES PRAME RXFP2 SHH SOX10 GATA1 HSD3B2 MYCN DDC PTGS2 NTN1 ASCL1 RND1 CD4 ELAVL4 DBF4 PTPRO HTR1A APCDD1 MAP2 RPS19 PTEN LDHA PTGDS PLOD2 ANGPT1 EPHB2 ARL6IP5 BAX RBM15B BCL2 ATP6V1A CASP3 PLXNA1 CDKN1B PPA1 CXCL8 ZNF22 NGF FILIP1L NTRK1 TASP1 SKP2 SGPL1 SPP1 RABGEF1 TP53 ACTA2 CCND2 BMP2 AHR GATA6 APOC3 KDR BAMBI OCLN BGLAP PROX1 BTRC CGA CDKN2B DKK1 COL7A1 DLK1 DACH1 ZHX2 EPO AURKA FBXO32 BEST1 FSTL3 CCNG2 HP CDC25C POR DCT ATF1 RUNX1T1 HESX1 BTF3 SERPINE1 IGF1 SKIL IL6 SMAD7 PAX6 TGFB1 POU1F1 E2F1 TNC RBP3 UCP2 TYR ZFP36 HOXB1 HIF1A SPAST NANOG HSF1 PF4 SOX3 VCP ABCC3 ABCC6 MYC ASXL1 BMP4 CCND1 FGF4 ISL1 POU3F2 ITGA6 L1TD1 REL LHX3 MKI67 MMP3 NTRK3 PGA5 PLAC1 ENO1
+Targets (Marker + Target genes: OTX2 LMX1A MSX1 DMRTA2 HEY1 SOX2 PBX1 SOX9 HES1 MAFB BCL11A SOX11 ZBTB33 ING4 SMAD4
+2024-02-22 08:18:10,473 - craft.stages.create_network - INFO - Error thrown by p4cytoscape during merging of networks. The merged network is created in Cytoscape though!
+2024-02-22 08:18:26,907 - craft.stages.create_network - INFO - Network generated in Cytoscaoe software.
+2024-02-22 08:18:26,924 - craft.stages.functional_analysis - INFO - Functional analysis started using: ('./test_dump', '/Trrust_Analysis/transsynw_genes.csv')
+2024-02-22 08:18:50,397 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 08:18:50,399 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 08:18:50,399 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 08:18:50,399 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 08:18:50,399 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 08:19:00,614 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 08:19:11,716 - craft.stages.functional_analysis - INFO - Functional analysis started using: ('./test_dump', '/Trrust_Analysis/signet_genes.csv')
+2024-02-22 08:19:26,785 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 08:19:29,585 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 08:19:29,586 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 08:19:29,586 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 08:19:36,718 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 08:19:36,718 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 08:19:43,483 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 08:19:52,768 - craft.stages.generate_hypothesis - INFO - Generating hypothesis using: ('start.txt', 'start_terminal.txt', 'annotation.txt', 'HPROGFPM')
+2024-02-22 08:37:33,391 - craft.stages.mechanistic_insights - INFO - Obtaining mechanistic insights using: '('start.txt', 'start_terminal.txt', 'annotation.txt', 'HPROGFPM', 'HNES')
+2024-02-22 08:38:10,127 - craft.tool.PAGA - INFO - The starting cells are: HNES
+2024-02-22 08:38:14,116 - craft.tool.PAGA - DEBUG - PAGA analysis done!!!
+2024-02-22 08:38:14,187 - craft.stages.trrust_analysis - INFO - RUNNING TRRUST_analysis with using: ('./data/trrust_rawdata_human.tsv', './test_dump')
+2024-02-22 10:31:43,877 - craft.stages.mechanistic_insights - INFO - Obtaining mechanistic insights using: '('hff.txt', 'hffomtn.txt', 'omtn_ann.txt', 'HFF', 'hOMTN', './data/hOMTN.csv', './data/trrust_rawdata_human.tsv')
+2024-02-22 10:32:16,516 - craft.tool.PAGA - INFO - The starting cells are: hOMTN
+2024-02-22 10:32:19,878 - craft.tool.PAGA - DEBUG - PAGA analysis done!!!
+2024-02-22 10:32:19,878 - craft.stages.grn_inference - INFO - Inferring Gene regulatory network information using: 
+2024-02-22 11:11:53,902 - craft.stages.trrust_analysis - INFO - RUNNING TRRUST_analysis with using: ('./data/trrust_rawdata_human.tsv', '/Users/avani_mahadik/Desktop/Pipeline/Creating_methods/artefacts/hffxomtn')
+2024-02-22 11:11:54,054 - craft.stages.create_network - INFO - Creating  network using: /Users/avani_mahadik/Desktop/Pipeline/Creating_methods/artefacts/hffxomtn/Trrust_Analysis/trrust_analysis.csv
+2024-02-22 11:12:34,106 - craft.stages.create_network - DEBUG - Sources (TFs): CRX SPIB HES2 MEIS1 GATA2 CEBPB THRA FOS KLF6 KLF7 JUND HES5 FOSB JUN BCL11A FOXA2 PAX5 SIN3A ZNF300
+Targets (Marker + Target genes: F2RL3 ERN2 SLC24A4 CYP1A2 IL12RB1 CDH1 KLRD1 PDE6A MYOZ3 SLC14A2 PTPN2 PDE4D ADD3 SYT1 ADCY2 ADAMTS6 STRBP DNM3 NEAT1 ARHGEF25 DNAJA4 VAMP2 CXCR4 STMN3 KLF7 HDGF ABR NR2F1 CDC42BPA SENP7 SCN9A TM7SF3 NINL SLC5A3 WWC2 HP1BP3 CCDC112 ARRB2 AATK NNAT
+2024-02-22 11:12:36,247 - craft.stages.create_network - DEBUG - Sources (TFs): POU4F2 RHO SEMA6A MAFB TUBB3 VIM SOX11 AMH CIITA AR CDK4 CDKN1A GATA4 CEACAM1 COL11A2 COL2A1 DCC KLF4 MIA MITF NES PRAME RXFP2 SHH SOX10 GATA1 LMX1A HSD3B2 DMRTA2 MYCN DDC PTGS2 NTN1 ASCL1 RND1 CD4 ELAVL4 DBF4 PTPRO HTR1A APCDD1 MAP2 RPS19 PTEN LDHA PTGDS PLOD2 ANGPT1 EPHB2 ARL6IP5 ZBTB33 BAX RBM15B BCL2 ATP6V1A CASP3 PLXNA1 CDKN1B PPA1 CXCL8 ZNF22 NGF FILIP1L NTRK1 TASP1 SKP2 SGPL1 SPP1 RABGEF1 TP53 ACTA2 CCND2 BMP2 AHR GATA6 APOC3 KDR BAMBI OCLN BGLAP PROX1 BTRC CGA CDKN2B DKK1 COL7A1 DLK1 DACH1 ZHX2 EPO AURKA OTX2 FBXO32 BEST1 FSTL3 CCNG2 HP CDC25C POR DCT ATF1 RUNX1T1 HESX1 BTF3 SERPINE1 IGF1 SKIL IL6 SMAD7 PAX6 TGFB1 POU1F1 E2F1 TNC RBP3 UCP2 TYR ZFP36 HOXB1 HIF1A SPAST NANOG HSF1 PF4 SOX3 VCP ABCC3 ABCC6 MYC ASXL1 BMP4 CCND1 FGF4 ISL1 POU3F2 ITGA6 L1TD1 REL LHX3 MKI67 MMP3 NTRK3 PGA5 PLAC1 ENO1
+Targets (Marker + Target genes: CRX SPIB HES2 MEIS1 GATA2 CEBPB THRA FOS KLF6 KLF7 JUND HES5 FOSB JUN BCL11A FOXA2 PAX5 SIN3A ZNF300
+2024-02-22 11:13:18,871 - craft.stages.create_network - INFO - Error thrown by p4cytoscape during merging of networks. The merged network is created in Cytoscape though!
+2024-02-22 11:13:43,725 - craft.stages.create_network - INFO - Network generated in Cytoscaoe software.
+2024-02-22 11:13:43,726 - craft.stages.functional_analysis - INFO - Functional analysis started using: ('/Users/avani_mahadik/Desktop/Pipeline/Creating_methods/artefacts/hffxomtn', '/Trrust_Analysis/transsynw_genes.csv')
+2024-02-22 11:13:57,080 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:15:21,640 - craft.stages.functional_analysis - INFO - Functional analysis started using: ('/Users/avani_mahadik/Desktop/Pipeline/Creating_methods/artefacts/hffxomtn', '/Trrust_Analysis/transsynw_genes.csv')
+2024-02-22 11:15:35,053 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:15:55,363 - craft.stages.functional_analysis - INFO - Functional analysis started using: ('/Users/avani_mahadik/Desktop/Pipeline/Creating_methods/artefacts/hffxomtn', '/Trrust_Analysis/signet_genes.csv')
+2024-02-22 11:23:31,845 - craft.stages.functional_analysis - INFO - Functional analysis started using: ('/Users/avani_mahadik/Desktop/Pipeline/Creating_methods/artefacts/hffxomtn', '/Trrust_Analysis/transsynw_genes.csv')
+2024-02-22 11:24:38,419 - craft.stages.functional_analysis - INFO - Functional analysis started using: ('/Users/avani_mahadik/Desktop/Pipeline/Creating_methods/artefacts/hffxomtn', '/Trrust_Analysis/transsynw_genes.csv')
+2024-02-22 11:24:53,393 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:25:15,371 - craft.stages.functional_analysis - INFO - Functional analysis started using: ('/Users/avani_mahadik/Desktop/Pipeline/Creating_methods/artefacts/hffxomtn', '/Trrust_Analysis/signet_genes.csv')
+2024-02-22 11:25:52,838 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:25:52,839 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:25:52,839 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:26:02,704 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:26:02,705 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:26:02,705 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:26:17,457 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:26:18,844 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:26:24,253 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:26:31,765 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:26:31,765 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:26:31,765 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:26:31,765 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:26:31,765 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:26:31,765 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:26:31,765 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:26:31,765 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:26:31,765 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:26:34,553 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:26:34,554 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:26:46,146 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 11:40:08,103 - craft.stages.mechanistic_insights - INFO - Obtaining mechanistic insights using: '('hff.txt', 'hffomtn.txt', 'omtn_ann.txt', 'hOMTN', 'HFF', './data/hOMTN.csv', './data/trrust_rawdata_human.tsv')
+2024-02-22 11:40:38,765 - craft.tool.PAGA - INFO - The starting cells are: HFF
+2024-02-22 11:40:42,508 - craft.tool.PAGA - DEBUG - PAGA analysis done!!!
+2024-02-22 11:40:42,508 - craft.stages.grn_inference - INFO - Inferring Gene regulatory network information using: 
+2024-02-22 12:09:28,990 - craft.stages.trrust_analysis - INFO - RUNNING TRRUST_analysis with using: ('./data/trrust_rawdata_human.tsv', '/Users/avani_mahadik/Desktop/Pipeline/Creating_methods/artefacts/hffxomtn')
+2024-02-22 12:09:29,012 - craft.stages.create_network - INFO - Creating  network using: /Users/avani_mahadik/Desktop/Pipeline/Creating_methods/artefacts/hffxomtn/Trrust_Analysis/trrust_analysis.csv
+2024-02-22 12:09:41,433 - craft.stages.create_network - DEBUG - Sources (TFs): PEG3 PHOX2B CSRNP3 PHOX2A CXXC4 ISL1 FOXA2 ASCL1 GATA3 ZNF143 FOS REST TAF1 CREB3 HMGA2 HES5 USF1 USF2 NHLH1 PBX1 SOX11 SATB1 ZNF248 ZNF669
+Targets (Marker + Target genes: TUBB2B DCX NEFM CD24 CRMP1 KIF5C MARCKSL1 MLLT11 ELAVL4 NCAM1 FHL1 KLHL5 BASP1 AP4S1 FAM174B UBE2T LOC440434 PDAP1 ARMCX1 THY1 CBS CAMTA1 PHF21B CEP120 MOSPD1 CYR61 ZNHIT1
+2024-02-22 12:09:41,780 - craft.stages.create_network - DEBUG - Sources (TFs): POU4F2 RHO SEMA6A MAFB TUBB3 VIM AMH CIITA AR CDK4 CDKN1A GATA4 CEACAM1 COL11A2 COL2A1 DCC KLF4 MIA MITF NES PRAME RXFP2 SHH SOX10 GATA1 LMX1A HSD3B2 DMRTA2 MYCN DDC PTGS2 NTN1 RND1 CD4 ELAVL4 DBF4 PTPRO HTR1A APCDD1 MAP2 RPS19 PTEN LDHA PTGDS PLOD2 ANGPT1 EPHB2 ARL6IP5 ZBTB33 BAX RBM15B BCL2 ATP6V1A CASP3 PLXNA1 CDKN1B PPA1 CXCL8 ZNF22 NGF FILIP1L NTRK1 TASP1 SKP2 SGPL1 SPP1 RABGEF1 TP53 ACTA2 CCND2 BMP2 AHR GATA6 APOC3 KDR BAMBI OCLN BGLAP PROX1 BTRC CGA CDKN2B DKK1 COL7A1 DLK1 DACH1 ZHX2 EPO AURKA OTX2 FBXO32 BEST1 FSTL3 CCNG2 HP CDC25C POR DCT ATF1 RUNX1T1 HESX1 BTF3 SERPINE1 IGF1 SKIL IL6 SMAD7 PAX6 TGFB1 POU1F1 E2F1 TNC RBP3 UCP2 TYR ZFP36 HOXB1 HIF1A SPAST NANOG HSF1 PF4 SOX3 VCP ABCC3 ABCC6 MYC ASXL1 BMP4 CCND1 FGF4 POU3F2 ITGA6 L1TD1 REL LHX3 MKI67 MMP3 NTRK3 PGA5 PLAC1 ENO1
+Targets (Marker + Target genes: PEG3 PHOX2B CSRNP3 PHOX2A CXXC4 ISL1 FOXA2 ASCL1 GATA3 ZNF143 FOS REST TAF1 CREB3 HMGA2 HES5 USF1 USF2 NHLH1 PBX1 SOX11 SATB1 ZNF248 ZNF669
+2024-02-22 12:09:53,026 - craft.stages.create_network - INFO - Error thrown by p4cytoscape during merging of networks. The merged network is created in Cytoscape though!
+2024-02-22 12:09:58,553 - craft.stages.create_network - INFO - Network generated in Cytoscaoe software.
+2024-02-22 12:09:58,556 - craft.stages.functional_analysis - INFO - Functional analysis started using: ('/Users/avani_mahadik/Desktop/Pipeline/Creating_methods/artefacts/hffxomtn', '/Trrust_Analysis/transsynw_genes.csv')
+2024-02-22 16:01:30,169 - craft.stages.functional_analysis - INFO - Functional analysis started using: ('/Users/avani_mahadik/Desktop/Pipeline/Creating_methods/artefacts/hffxomtn', '/Trrust_Analysis/transsynw_genes.csv')
+2024-02-22 16:01:57,971 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:00,927 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:00,928 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:00,928 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:08,309 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:10,004 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:10,004 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:10,005 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:10,005 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:10,005 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:10,005 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:10,005 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:10,005 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:10,005 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:10,005 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:10,012 - craft.stages.functional_analysis - INFO - Functional analysis started using: ('/Users/avani_mahadik/Desktop/Pipeline/Creating_methods/artefacts/hffxomtn', '/Trrust_Analysis/signet_genes.csv')
+2024-02-22 16:02:40,514 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:40,514 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:40,514 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:42,149 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:49,558 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:56,316 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:58,335 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:59,827 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:02:59,827 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:03:01,217 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:03:01,217 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:03:01,217 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:03:01,217 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:03:01,217 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:03:01,217 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:03:01,217 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:03:02,654 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:03:03,992 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:03:05,098 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:03:17,210 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:03:17,210 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:03:17,210 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:03:17,210 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:06:40,398 - craft.stages.mechanistic_insights - INFO - Obtaining mechanistic insights using: '('hff.txt', 'hffomtn.txt', 'omtn_ann.txt', 'hOMTN', 'HFF', './data/hOMTN.csv', './data/trrust_rawdata_human.tsv')
+2024-02-22 16:07:11,302 - craft.tool.PAGA - INFO - The starting cells are: HFF
+2024-02-22 16:07:15,049 - craft.tool.PAGA - DEBUG - PAGA analysis done!!!
+2024-02-22 16:07:15,049 - craft.stages.grn_inference - INFO - Inferring Gene regulatory network information using: 
+2024-02-22 16:37:17,447 - craft.stages.trrust_analysis - INFO - RUNNING TRRUST_analysis with using: ('./data/trrust_rawdata_human.tsv', '/Users/avani_mahadik/Desktop/Pipeline/Creating_methods/artefacts/temp4')
+2024-02-22 16:37:17,475 - craft.stages.create_network - INFO - Creating  network using: /Users/avani_mahadik/Desktop/Pipeline/Creating_methods/artefacts/temp4/Trrust_Analysis/trrust_analysis.csv
+2024-02-22 16:37:30,644 - craft.stages.create_network - DEBUG - Sources (TFs): PEG3 PHOX2B CSRNP3 PHOX2A CXXC4 ISL1 FOXA2 ASCL1 ZNF429 JUND HES1 USF1 TCF4 ATF1 JUN MAFG ONECUT2 FOXJ2 FOXA2 CBFB EBF1 NFIA SALL2 SMAD2 ENO1 ZNF250 HDAC8 ZNF445 ZNF681
+Targets (Marker + Target genes: TUBB2B DCX NEFM CD24 CRMP1 KIF5C MARCKSL1 MLLT11 ELAVL4 NCAM1 EDIL3 RCC2 KIF13A TBCC KDM4B PHOX2A ZDHHC17 SDC3 JUNB TNRC6C CNTNAP2 SCN3B SEZ6 HELZ EPB41L1 JAKMIP2 SLC22A23 RPL13A SLC38A1 UBB CD24 MTPAP PPP3R1 PAIP1 RHPN1 PPP1R16A NAV3 C17orf75 MYO6 GPRASP1 ZEB1 CAMKK1 TPX2 GREM2 PPIL1 CLK1 SHISA9 BBC3 PCM1
+2024-02-22 16:37:31,025 - craft.stages.create_network - DEBUG - Sources (TFs): POU4F2 RHO SEMA6A MAFB TUBB3 VIM SOX11 AMH CIITA AR CDK4 CDKN1A GATA4 CEACAM1 COL11A2 COL2A1 DCC KLF4 MIA MITF NES PRAME RXFP2 SHH SOX10 GATA1 LMX1A HSD3B2 DMRTA2 MYCN DDC PTGS2 NTN1 RND1 CD4 ELAVL4 DBF4 PTPRO HTR1A APCDD1 MAP2 RPS19 PTEN LDHA PTGDS PLOD2 ANGPT1 EPHB2 ARL6IP5 ZBTB33 BAX RBM15B BCL2 ATP6V1A CASP3 PLXNA1 CDKN1B PPA1 CXCL8 ZNF22 NGF FILIP1L NTRK1 TASP1 SKP2 SGPL1 SPP1 RABGEF1 TP53 ACTA2 CCND2 BMP2 AHR GATA6 APOC3 KDR BAMBI OCLN BGLAP PROX1 BTRC CGA CDKN2B DKK1 COL7A1 DLK1 DACH1 ZHX2 EPO AURKA OTX2 FBXO32 BEST1 FSTL3 CCNG2 HP CDC25C POR DCT RUNX1T1 HESX1 BTF3 SERPINE1 IGF1 SKIL IL6 SMAD7 PAX6 TGFB1 POU1F1 E2F1 TNC RBP3 UCP2 TYR ZFP36 HOXB1 HIF1A SPAST NANOG HSF1 PF4 SOX3 VCP ABCC3 ABCC6 MYC ASXL1 BMP4 CCND1 FGF4 POU3F2 ITGA6 L1TD1 REL LHX3 MKI67 MMP3 NTRK3 PGA5 PLAC1
+Targets (Marker + Target genes: PEG3 PHOX2B CSRNP3 PHOX2A CXXC4 ISL1 FOXA2 ASCL1 ZNF429 JUND HES1 USF1 TCF4 ATF1 JUN MAFG ONECUT2 FOXJ2 FOXA2 CBFB EBF1 NFIA SALL2 SMAD2 ENO1 ZNF250 HDAC8 ZNF445 ZNF681
+2024-02-22 16:37:42,062 - craft.stages.create_network - INFO - Error thrown by p4cytoscape during merging of networks. The merged network is created in Cytoscape though!
+2024-02-22 16:37:47,829 - craft.stages.create_network - INFO - Network generated in Cytoscaoe software.
+2024-02-22 16:37:47,830 - craft.stages.functional_analysis - INFO - Functional analysis started using: ('/Users/avani_mahadik/Desktop/Pipeline/Creating_methods/artefacts/temp4', '/Trrust_Analysis/transsynw_genes.csv')
+2024-02-22 16:38:16,528 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:38:19,702 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:38:19,702 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:38:19,702 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:38:26,970 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:38:28,653 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:38:28,653 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:38:28,653 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:38:28,654 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:38:28,654 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:38:28,654 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:38:28,654 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:38:28,654 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:38:28,654 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:38:28,654 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:38:28,660 - craft.stages.functional_analysis - INFO - Functional analysis started using: ('/Users/avani_mahadik/Desktop/Pipeline/Creating_methods/artefacts/temp4', '/Trrust_Analysis/signet_genes.csv')
+2024-02-22 16:39:21,382 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:39:22,565 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:39:24,160 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:39:24,160 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:39:24,160 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:39:24,160 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:39:24,161 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:39:24,161 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:39:24,161 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:39:24,161 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:39:24,161 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:39:24,161 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:39:24,161 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:39:24,161 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:39:24,161 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:39:24,161 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:39:38,544 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:39:38,544 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:39:50,202 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:39:54,394 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:40:03,358 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:40:03,358 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:40:07,784 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:40:09,295 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:40:10,829 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:40:12,157 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:40:13,809 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:40:18,266 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:40:18,266 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:40:18,266 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:40:24,750 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:40:29,063 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-22 16:40:29,063 - craft.stages.functional_analysis - INFO - An exception occurred
