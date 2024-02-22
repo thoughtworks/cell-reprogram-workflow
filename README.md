@@ -41,7 +41,8 @@ User needs to define the CAPTH and LD_LIBRARY_PATH
 
 #### 7. wget: 
 `brew install wget`
-
+#### 8. feature file
+User needs to download the feature file from https://resources.aertslab.org/cistarget/databases/old/homo_sapiens/hg19/refseq_r45/mc9nr/gene_based/ in the data folder.
 <hr>
 
 ### Definitions
