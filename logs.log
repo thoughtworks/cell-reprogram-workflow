@@ -2644,3 +2644,16 @@ Targets (Marker + Target genes: PEG3 PHOX2B CSRNP3 PHOX2A CXXC4 ISL1 FOXA2 ASCL1
 2024-02-22 16:40:24,750 - craft.stages.functional_analysis - INFO - An exception occurred
 2024-02-22 16:40:29,063 - craft.stages.functional_analysis - INFO - An exception occurred
 2024-02-22 16:40:29,063 - craft.stages.functional_analysis - INFO - An exception occurred
+2024-02-23 00:17:20,674 - craft.stages.generate_hypothesis - INFO - Generating hypothesis using: ('hff.txt', 'hff_da.txt', 'hff_da_ann.txt', 'hDA')
+2024-02-23 00:18:55,847 - craft.stages.mechanistic_insights - INFO - Obtaining mechanistic insights using: '('hff.txt', 'hff_da.txt', 'hff_da_ann.txt', 'hDA', 'HFF')
+2024-02-23 00:19:35,827 - craft.tool.PAGA - INFO - The starting cells are: HFF
+2024-02-23 00:19:39,819 - craft.tool.PAGA - DEBUG - PAGA analysis done!!!
+2024-02-23 00:21:46,000 - craft.stages.mechanistic_insights - INFO - Obtaining mechanistic insights using: '('hff.txt', 'hff_gaba.txt', 'gaba_ann.txt', 'hNbGaba', 'HFF')
+2024-02-23 00:22:14,441 - craft.tool.PAGA - INFO - The starting cells are: HFF
+2024-02-23 00:22:18,516 - craft.tool.PAGA - DEBUG - PAGA analysis done!!!
+2024-02-23 00:25:35,661 - craft.stages.mechanistic_insights - INFO - Obtaining mechanistic insights using: '('hff.txt', 'hffsert.txt', 'sert_ann.txt', 'hSert', 'HFF')
+2024-02-23 00:26:03,574 - craft.tool.PAGA - INFO - The starting cells are: HFF
+2024-02-23 00:26:07,580 - craft.tool.PAGA - DEBUG - PAGA analysis done!!!
+2024-02-23 00:29:37,325 - craft.stages.mechanistic_insights - INFO - Obtaining mechanistic insights using: '('hff.txt', 'hff_progfpm.txt', 'hff_prog_ann.txt', 'hProgFPM', 'HFF')
+2024-02-23 00:30:12,203 - craft.tool.PAGA - INFO - The starting cells are: HFF
+2024-02-23 00:30:16,255 - craft.tool.PAGA - DEBUG - PAGA analysis done!!!
