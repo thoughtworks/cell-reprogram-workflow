@@ -22,7 +22,7 @@ jobs:
         java-version: '11'
     - name: Setup cytoscape
       run: |
-        curl https://github.com/cytoscape/cytoscape/releases/download/3.9.1/Cytoscape_3_9_1_unix.sh -o Cytoscape_3_9_1_unix.sh
+        wget https://github.com/cytoscape/cytoscape/releases/download/3.9.1/Cytoscape_3_9_1_unix.sh
         chmod u+x  Cytoscape_3_9_1_unix.sh
         sh Cytoscape_3_9_1_unix.sh 
         Cytoscape &
