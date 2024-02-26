@@ -51,6 +51,19 @@ jobs:
           packages: |
             any::Rcpp 
             any::gtools
+            any::Matrix
+            any::nibble
+            any::dplyr
+            any::stringr
+            any::purrr
+            any:;reshape2
+            any::umap
+            any::pheatmap
+            any::igraph
+            any::GGally
+            any::ggplot2
+            any::RcisTarget
+            any::AUCell
             
     #  - uses: actions/checkout@v4
     # - uses: r-lib/actions/setup-r@v2
