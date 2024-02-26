@@ -37,9 +37,9 @@ jobs:
         bash setup.sh
     - name: Installing R
       run: |
-       curl -O https://cran.rstudio.com/src/base/R-4/R-${4.2.2}.tar.gz
-       tar -xzvf R-${4.2.2}.tar.gz
-       cd R-${4.2.2}
+       curl -O https://cran.r-project.org/src/base/R-4/R-4.2.2.tar.gz
+       tar -xzvf R-4.2.2.tar.gz
+       cd R-4.2.2
        R
        install.packages(c("gtools","Matrix", "nibble","dplyr","stringr","purrr","Rcpp","reshape2","umap","pheatmap", "igraph","GGally","ggplot2","RcisTarget","AUCell"))
     - name: Test with pytest
