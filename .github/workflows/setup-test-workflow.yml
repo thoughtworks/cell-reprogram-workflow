@@ -45,10 +45,35 @@ jobs:
         python -m pip install --upgrade pip
         pip install pytest
         bash setup.sh
-    - name: Install macOS system dependencies
-      run: |
-          brew install boost
-          brew install wget
+ 
+    - uses: actions/checkout@v4
+    - uses: r-lib/actions/setup-r@v2
+    - uses: r-lib/actions/setup-r-dependencies@v2
+      with:
+                cache-version: 2
+                extra-packages: |
+                  any::gtools
+                  any::Matrix
+                  any::nibble
+                  any::dplyr
+                  any::stringr
+                  any::purrr
+                  any::Rcpp
+                  any:;reshape2
+                  any::umap
+                  any::pheatmap
+                  any::igraph
+                  any::GGally
+                  any::ggplot2
+                  any::RcisTarget
+                  any::AUCell
+                needs: |
+                  website
+                  coverage
+    # - name: Install macOS system dependencies
+    #   run: |
+    #       brew install boost
+    #       brew install wget
     # - name: Installing R
     #   run: |
     #    curl -O https://cran.r-project.org/src/base/R-4/R-4.2.2.tar.gz
