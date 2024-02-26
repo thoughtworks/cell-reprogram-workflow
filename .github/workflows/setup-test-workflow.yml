@@ -45,13 +45,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install pytest
         bash setup.sh
-    - name: Install dependencies
-      run: |
-            remotes::install_deps(dependencies = TRUE)
-            remotes::install_cran("rcmdcheck")
-            remotes::install_cran("devtools")
-            devtools::install()
-      shell: Rscript {0}
+    - name: Install packages
+      uses: r-lib/actions/setup-r-dependencies@v2
+      with:
+          packages: |
+            any::Rcpp 
+            any::gtools
             
     #  - uses: actions/checkout@v4
     # - uses: r-lib/actions/setup-r@v2
