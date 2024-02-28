@@ -1,6 +1,9 @@
 
 
 # dependencies for TransSynW
+python -m pip install --upgrade pip
+pip install pytest
+pip install -r requirements.txt
 
 mkdir ./craft/dependencies
 cd ./craft/dependencies
