@@ -4,13 +4,7 @@
 python -m pip install --upgrade pip
 pip install pytest
 pip install -r requirements.txt
-R -e 'install.packages(c\
-          ("gtools","Matrix", \
-          "nibble","dplyr","stringr",\
-          "purrr","Rcpp","reshape2","umap",\
-          "pheatmap", "igraph","GGally","ggplot2",\
-          "RcisTarget","AUCell"), \
-          repos = "http://cran.us.r-project.org")'
+R -e 'install.packages(c("gtools","Matrix", "nibble","dplyr","stringr", "purrr","Rcpp","reshape2","umap", "pheatmap", "igraph","GGally","ggplot2", "RcisTarget","AUCell"), repos = "http://cran.us.r-project.org")'
 
 
 mkdir ./craft/dependencies
