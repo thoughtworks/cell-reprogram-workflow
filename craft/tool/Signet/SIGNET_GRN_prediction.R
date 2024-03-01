@@ -9,7 +9,6 @@ in_path = args[1]
 library(reshape2)
 library(umap)
 library(pheatmap)
-library(igraph)
 library(GGally) # ggplot2 >= 3.3.0
 library(ggplot2)
 library(RcisTarget)
