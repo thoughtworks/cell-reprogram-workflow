@@ -1,7 +1,7 @@
 
 
 # Install R dependencies
-R -e 'install.packages(c("gtools","Matrix", "nibble","dplyr","stringr", "purrr","Rcpp","reshape2","umap", "pheatmap", "igraph","GGally","ggplot2", "RcisTarget","AUCell"), repos = "http://cran.us.r-project.org")'
+R -e 'install.packages(c("purrr","Rcpp","reshape2","RcisTarget"), repos = "http://cran.us.r-project.org")'
 # dependencies for TransSynW
 
 mkdir ./craft/dependencies

@@ -6,14 +6,13 @@ in_path = args[1]
 
 # code_path =paste(wd+'/src/tool/Signet/')
 
-library(reshape2)
-library(umap)
-library(pheatmap)
-library(GGally) # ggplot2 >= 3.3.0
-library(ggplot2)
+# library(reshape2)
+# library(umap)
+# library(pheatmap)
+# library(GGally) # ggplot2 >= 3.3.0
+# library(ggplot2)
 library(RcisTarget)
-library(AUCell)
-library(RcisTarget)
+
 
 source('./craft/tool/Signet/SIGNET.R')
 
