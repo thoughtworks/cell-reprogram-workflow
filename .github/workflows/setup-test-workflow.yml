@@ -28,7 +28,7 @@ jobs:
     - name: Installing and setting up dependencies
       run: |
         export CPATH=$CPATH:/usr/local/include
-        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/include
+        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
         bash test_setup.sh
     
     - name: Test with pytest
