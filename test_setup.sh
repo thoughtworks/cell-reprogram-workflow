@@ -4,8 +4,11 @@
 python -m pip install --upgrade pip
 pip install pytest
 pip install -r requirements.txt
-R -e 'install.packages(c("purrr","Rcpp","reshape2","RcisTarget"), repos = "http://cran.us.r-project.org")'
-R -e 'install.packages("~/R/RcisTarget_1.0.2.tar.gz", repos=NULL)'
+R -e 'install.packages(c("purrr","Rcpp","reshape2","gtools","tibble","stringr","stringili"), repos = "http://cran.us.r-project.org")'
+
+R -e 'install.packages(https://bioconductor.org/packages/release/bioc/bin/macosx/big-sur-arm64/contrib/4.3/RcisTarget_1.22.0.tgz, repos = NULL, type="source")'
+
+R -e 'install.packages(https://cran.r-project.org/src/contrib/tibble_3.2.1.tar.gz, repos = NULL, type="source")'
 
 sudo apt install libboost-all-dev
 
