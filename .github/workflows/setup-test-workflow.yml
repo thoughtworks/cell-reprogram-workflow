@@ -21,8 +21,7 @@ jobs:
         r-version: '4.2.0' # The R version to download (if necessary) and use.
     
     - run: Rscript -e 'print("hello")'
-    - run: R -e 'install.packages(https://bioconductor.org/packages/release/bioc/bin/macosx/big-sur-arm64/contrib/4.3/RcisTarget_1.22.0.tgz, repos = NULL, type="source")'
-           R -e 'install.packages(https://cran.r-project.org/src/contrib/tibble_3.2.1.tar.gz, repos = NULL, type="source")'
+    - run: Rscript -e 'install.packages('RcisTarget', repos='http://cran.us.r-project.org', dependencies=TRUE)'
 
     - name: Set up Python 3.9
       uses: actions/setup-python@v3
