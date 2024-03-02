@@ -21,7 +21,12 @@ jobs:
         r-version: '4.2.0' # The R version to download (if necessary) and use.
     
     - run: Rscript -e 'print("hello")'
-    - run: Rscript -e 'install.packages('RcisTarget', repos='http://cran.us.r-project.org', dependencies=TRUE)'
+  
+    - uses: r-lib/actions/setup-r-dependencies@v2
+      with:
+           packages: |
+                    any::gtools 
+                    any::RcisTarget
 
     - name: Set up Python 3.9
       uses: actions/setup-python@v3
