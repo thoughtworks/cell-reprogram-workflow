@@ -7,7 +7,7 @@ pip install -r requirements.txt
 
 
 cd ./data
-curl -O https://resources.aertslab.org/cistarget/databases/old/homo_sapiens/hg19/refseq_r45/mc9nr/gene_based/ 
+curl -O https://resources.aertslab.org/cistarget/databases/old/homo_sapiens/hg19/refseq_r45/mc9nr/gene_based/hg19-tss-centered-10kb-10species.mc9nr.feather
 cd ..
 
 mkdir ./craft/dependencies

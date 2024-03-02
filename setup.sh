@@ -3,8 +3,10 @@
 # Install R dependencies
 R -e 'install.packages(c("purrr","Rcpp","reshape2","RcisTarget"), repos = "http://cran.us.r-project.org")'
 # dependencies for TransSynW
-export CPATH=$CPATH:/opt/homebrew/include
-export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/lib 
+
+cd ./data
+curl -O https://resources.aertslab.org/cistarget/databases/old/homo_sapiens/hg19/refseq_r45/mc9nr/gene_based/hg19-tss-centered-10kb-10species.mc9nr.feather 
+cd ..
 
 mkdir ./craft/dependencies
 cd ./craft/dependencies
