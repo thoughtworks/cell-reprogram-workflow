@@ -3,6 +3,8 @@
 # Install R dependencies
 R -e 'install.packages(c("purrr","Rcpp","reshape2","RcisTarget"), repos = "http://cran.us.r-project.org")'
 # dependencies for TransSynW
+export CPATH=$CPATH:/opt/homebrew/include
+export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/lib 
 
 mkdir ./craft/dependencies
 cd ./craft/dependencies
