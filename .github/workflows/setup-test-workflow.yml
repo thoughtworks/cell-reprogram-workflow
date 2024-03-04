@@ -44,7 +44,9 @@ jobs:
     
     - name: Test with pytest
       run: |
-      
         echo "$HOME/.local/bin" >> $GITHUB_PATH
+        python -m pytest tests/unittest
+      
+        
 
   
