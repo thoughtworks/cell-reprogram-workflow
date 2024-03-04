@@ -39,6 +39,14 @@ jobs:
         export LIBRARY_PATH=/usr/lib
         bash test_setup.sh
         python -m pytest tests/unittest
+
+    - name: 'Upload Artifact'
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+          name: my-artifact
+          path: test_dump
+          retention-days: 5
       
         
 
