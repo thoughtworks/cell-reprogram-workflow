@@ -40,8 +40,9 @@ jobs:
     
     - name: Test with pytest
       run: |
-        export LD_LIBRARY_PATH=/usr/local/lib:${LD_LIBRARY_PATH}
-        export CPATH=/usr/local/include:${CPATH}
+        echo "export CPATH=/path/to/your/include/directory:\$CPATH" >> $GITHUB_ENV
+        echo "export LIBRARY_PATH=/path/to/your/library/directory:\$LIBRARY_PATH" >> $GITHUB_ENV
+
         
         python -m pytest tests/unittest
       
