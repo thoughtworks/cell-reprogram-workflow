@@ -25,8 +25,7 @@ jobs:
     - uses: r-lib/actions/setup-r-dependencies@v2
       with:
            packages: |
-                    any::gtools 
-                    any::RcisTarget
+                    any::Rcpp
 
     - name: Set up Python 3.9
       uses: actions/setup-python@v3
@@ -45,5 +44,8 @@ jobs:
     
     - name: Test with pytest
       run: |
+        export CPATH=$CPATH:/usr/local/include
+        export C_INCLUDE_PATH=$pythonLocation/include/python${{ matrix.python-version }}:$C_INCLUDE_PATH
+        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
         python -m pytest tests/unittest
     
