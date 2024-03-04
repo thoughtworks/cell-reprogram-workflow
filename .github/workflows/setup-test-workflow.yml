@@ -40,8 +40,8 @@ jobs:
     
     - name: Test with pytest
       run: |
-        echo "export CPATH=/path/local/include/:\$CPATH" >> $GITHUB_ENV
-        echo "export LIBRARY_PATH=/path/local/lib:\$LIBRARY_PATH" >> $GITHUB_ENV
+        echo "export CPATH=/home/runner/work/Pipeline/Pipeline/include/:\$CPATH" >> $GITHUB_ENV
+        echo "export LIBRARY_PATH=/home/runner/work/Pipeline/Pipeline/lib:\$LIBRARY_PATH" >> $GITHUB_ENV
 
         
         python -m pytest tests/unittest
