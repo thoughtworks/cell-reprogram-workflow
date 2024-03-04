@@ -44,9 +44,7 @@ jobs:
     
     - name: Test with pytest
       run: |
-        export CPATH=$CPATH:/usr/local/include
-        export C_INCLUDE_PATH=$pythonLocation/include/python${{ github.workspace }}:$C_INCLUDE_PATH
-        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
-        python -m pytest tests/unittest
-    
-    
+      
+        echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+  
