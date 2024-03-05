@@ -26,6 +26,8 @@ jobs:
       with:
            packages: |
                     any::Rcpp
+                    any::gtools
+                    any::RcisTarget
 
     - name: Set up Python 3.9
       uses: actions/setup-python@v3
@@ -42,7 +44,7 @@ jobs:
       if: always()
       uses: actions/upload-artifact@v4
       with:
-          name: my-artifact
+          name: my-artifact 
           path: test_dump
           retention-days: 5
       
