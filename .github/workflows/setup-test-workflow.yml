@@ -28,6 +28,7 @@ jobs:
                     any::Rcpp
                     any::gtools
                     any::RcisTarget
+                    any::zoo
 
     - name: Set up Python 3.9
       uses: actions/setup-python@v3
@@ -40,12 +41,7 @@ jobs:
         bash test_setup.sh
         CPATH=/usr/include LIBRARY_PATH=/usr/lib python -m pytest tests/unittest
 
-    - name: Upload check results
-      if: failure()
-      uses: actions/upload-artifact@main
-      with:
-          name: ${{ runner.os }}-r
-          path: check
+
       
         
 
