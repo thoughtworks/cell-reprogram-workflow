@@ -1,4 +1,5 @@
 
+![workflow badge] (https://github.com/Avani7/Pipeline/actions/workflows/setup-test-workflow.yml/badge.svg)
 
 ### CRAFT: Cellular Reprogramming Analysis with Integrated Framework and Mechanistic Insight
 A framework created using already available tools and databases, to perform cellular reprogramming computationally. 
