@@ -1,5 +1,7 @@
 
-
+# install boost dependencies
+sudo apt-get update
+sudo apt-get install -y libboost-all-dev
 # dependencies for TransSynW
 python -m pip install --upgrade pip
 pip install pytest
