@@ -40,7 +40,12 @@ jobs:
         bash test_setup.sh
         CPATH=/usr/include LIBRARY_PATH=/usr/lib python -m pytest tests/unittest
 
-
+    - name: Upload check results
+      if: failure()
+      uses: actions/upload-artifact@main
+      with:
+          name: ${{ runner.os }}-r
+          path: check
       
         
 
