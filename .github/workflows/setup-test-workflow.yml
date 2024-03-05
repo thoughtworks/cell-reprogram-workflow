@@ -35,10 +35,8 @@ jobs:
     
     - name: Test with pytest
       run: |
-        export CPATH=/usr/include
-        export LIBRARY_PATH=/usr/lib
         bash test_setup.sh
-        python -m pytest tests/unittest
+        CPATH=/usr/include LIBRARY_PATH=/usr/lib python -m pytest tests/unittest
 
     - name: 'Upload Artifact'
       if: always()
