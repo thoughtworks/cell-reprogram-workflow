@@ -20,8 +20,6 @@ def runTranssynW(*args):
     ORGNAME=args[6]
     OUTPUT_DIR=args[7]
     
-    # os.environ["CPATH"]="/opt/homebrew/include"
-    # os.environ["LIBRARY_PATH"]="/opt/homebrew/lib"
 
     clean_up(OUTPUT_DIR)
     os.mkdir(OUTPUT_DIR)

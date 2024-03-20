@@ -1,8 +1,9 @@
 
-# install boost dependencies
+# Boost dependencies
 sudo apt-get update
 sudo apt-get install -y libboost-all-dev
-# dependencies for TransSynW
+
+# TransSynW dependencies
 python -m pip install --upgrade pip
 pip install pytest
 pip install -r requirements.txt
@@ -12,7 +13,7 @@ cd ./craft/dependencies
 touch __init__.py
 git clone --depth=1 https://gitlab.lcsb.uni.lu/CBG/transsynw.git transsynw
 
-# dependencies for Signet
+# Signet dependencies
 wget https://github.com/Lan-lab/SIGNET/raw/main/SIGNET_Tutorial/SIGNET.py -O SIGNET.py
 
 cd -

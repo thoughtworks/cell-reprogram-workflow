@@ -8,6 +8,17 @@ With this integration of the functionalities researchers can invest time in biol
 
 <hr>
 
+### Steps:
+
+1. Install all R requirements
+2. git clone using installation command mentioned below 
+3. cd into pipeline directory formed with clone command
+4. run the setup.sh file
+5. Install the feather file in data directory using the command mentioned below (Point 8)
+6. Run the commands as per the requirement. (Refer commands section given below)
+
+
+
 ## Installation
 git clone --depth 1 git@github.com:Avani7/Pipeline.git pipeline
 <!-- `curl https://raw.githubusercontent.com/Avani7/Pipeline/main/setup_git.sh | bash` -->
@@ -21,9 +32,6 @@ Use this command ro install R requirements
 ```
 install.packages(c("gtools","Matrix", "nibble","dplyr","stringr","purrr","Rcpp","reshape2","umap","pheatmap", "igraph","GGally","ggplot2","RcisTarget","AUCell"))
 ```
-
-<!-- setup.sh file: User needs to run this file to start. This file downloads the dependencies and runs the pip installation of craft.  -->
-
 
 #### 3. Python version used: Python 3.9
 #### 4. Cytoscape version recommended: 3.9.1. Cytoscape needs to open in the background while running the workflow.  
@@ -44,7 +52,12 @@ User needs to define the CAPTH and LD_LIBRARY_PATH
 `brew install wget`
 #### 8. feature file
 User needs to download the feature file from https://resources.aertslab.org/cistarget/databases/old/homo_sapiens/hg19/refseq_r45/mc9nr/gene_based/ and add it in the data folder.
+`curl -O https://resources.aertslab.org/cistarget/databases/old/homo_sapiens/hg19/refseq_r45/mc9nr/gene_based/hg19-tss-centered-10kb-10species.mc9nr.feather`
 <hr>
+
+
+
+
 
 ### Definitions
 <u>1. artefacts</u>: Directory provided by user, where all the results would be saved.  
@@ -106,9 +119,9 @@ The starting cell population and terminal cell population cluster IDs to be ener
 
 - <u>stage</u>: gene network (Cytoscape)  
 
-    craft run generate_network --artefacts ./artefacts/[directory_name] --params ./artefacts/[directory_name]/Trrust_Analysis/trrust_analysis.csv
+    craft run create_network --artefacts ./artefacts/[directory_name] --params ./artefacts/[directory_name]/Trrust_Analysis/trrust_analysis.csv
 
-    Eg: craft run generate_network --artefacts ./artefacts/temp --params ./artefacts/temp/Trrust_Analysis/trrust_analysis.csv 
+    Eg: craft run create_network --artefacts ./artefacts/temp --params ./artefacts/temp/Trrust_Analysis/trrust_analysis.csv 
 
 - <u>stage</u>: trrust analysis (TRRUST)  
 

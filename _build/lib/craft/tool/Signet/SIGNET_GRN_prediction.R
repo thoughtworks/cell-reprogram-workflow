@@ -6,15 +6,13 @@ in_path = args[1]
 
 # code_path =paste(wd+'/src/tool/Signet/')
 
-library(reshape2)
-library(umap)
-library(pheatmap)
-library(igraph)
-library(GGally) # ggplot2 >= 3.3.0
-library(ggplot2)
+# library(reshape2)
+# library(umap)
+# library(pheatmap)
+# library(GGally) # ggplot2 >= 3.3.0
+# library(ggplot2)
 library(RcisTarget)
-library(AUCell)
-library(RcisTarget)
+
 
 source('./craft/tool/Signet/SIGNET.R')
 
@@ -24,7 +22,7 @@ source('./craft/tool/Signet/SIGNET.R')
 data("motifAnnotations_hgnc")
 
 # Import the motif databases for RcisTarget
-motifRankings <- importRankings('./craft/tool/Signet/hg19-tss-centered-10kb-10species.mc9nr.feather')
+motifRankings <- importRankings('./data/hg19-tss-centered-10kb-10species.mc9nr.feather')
 gene <- colnames(motifRankings)
 
 

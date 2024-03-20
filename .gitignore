@@ -12,10 +12,11 @@ code
 deps
 craft/dependencies
 CRAFT.egg-info
-logs.log
 build/
 _build/
 __pycache__
 .pytest_cache
+logs.log
+
 
 !tests/artefacts
