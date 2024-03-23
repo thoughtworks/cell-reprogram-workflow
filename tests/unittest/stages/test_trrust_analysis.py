@@ -4,7 +4,7 @@ import pytest
 import shutil
 import os
 import filecmp
-from craft.stages.trrust_analysis import trrust_analysis
+from cmi.stages.trrust_analysis import trrust_analysis
 
 trrust_db_file = "./data/trrust_rawdata_human.tsv"
 artefacts_path = "./test_dump"

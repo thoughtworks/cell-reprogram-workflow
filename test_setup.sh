@@ -8,8 +8,8 @@ python -m pip install --upgrade pip
 pip install pytest
 pip install -r requirements.txt
 
-mkdir ./craft/dependencies
-cd ./craft/dependencies
+mkdir ./cmi/dependencies
+cd ./cmi/dependencies
 touch __init__.py
 git clone --depth=1 https://gitlab.lcsb.uni.lu/CBG/transsynw.git transsynw
 

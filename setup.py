@@ -2,7 +2,7 @@
 from setuptools import setup, find_packages
 
 setup_info = dict(
-    name='CRAFT',
+    name='CMI',
     version='0.1',
     author='E4R',
     author_email='e4r@thoughtworks.com',
@@ -18,16 +18,16 @@ setup_info = dict(
     long_description_content_type='text/markdown',
     license='MIT',
     # Package info
-    packages=['craft'] + ['craft.' + pkg for pkg in find_packages('craft')],
+    packages=['cmi'] + ['cmi.' + pkg for pkg in find_packages('cmi')],
     package_data={
-        "craft.tool.Signet": ["*.R", "*.txt"],
-        "craft.dependencies": ["transsynw/*/*", "SIGNET.py"]
+        "cmi.tool.Signet": ["*.R", "*.txt"],
+        "cmi.dependencies": ["transsynw/*/*", "SIGNET.py"]
 
     },
     # Add _ prefix to the names of temporary build dirs
     options={'build': {'build_base': '_build'}, },
     zip_safe=True,
-    scripts=['bin/craft'],
+    scripts=['bin/cmi'],
     install_requires=[
     'anndata==0.10.3',
     'array-api-compat==1.4',

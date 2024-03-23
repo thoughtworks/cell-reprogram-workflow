@@ -10,8 +10,8 @@ hg19-tss-centered-10kb-10species.mc9nr.feather
 test_dump
 code
 deps
-craft/dependencies
-CRAFT.egg-info
+cmi/dependencies
+CMI.egg-info
 build/
 _build/
 __pycache__
