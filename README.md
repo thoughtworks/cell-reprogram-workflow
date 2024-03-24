@@ -112,11 +112,12 @@ The starting cell population and terminal cell population cluster IDs to be ener
 
     Eg: cmi run grn_inference --artefacts ./artefacts/temp --params ./data/terminal.csv
 
-- <u>stage</u>: functional analysis (Uniprot)  
+- <u>stage</u>: trrust analysis (TRRUST)  
 
-    cmi run functional_analysis --artefacts ./artefacts/[directory_name] transync_genes.csv signet_unique_gene_list.csv  
+    cmi run trrust_analysis --artefacts ./artefacts/[directory_name] --params ./data/trrust_rawdata_human.tsv
 
-    Eg: cmi run functional_analysis --artefacts ./artefacts/temp transync_genes.csv signet_unique_gene_list.csv
+    Eg: cmi run trrust_analysis --artefacts ./artefacts/temp --params ./data/trrust_rawdata_human.tsv 
+
 
 - <u>stage</u>: gene network (Cytoscape)  
 
@@ -124,8 +125,8 @@ The starting cell population and terminal cell population cluster IDs to be ener
 
     Eg: cmi run create_network --artefacts ./artefacts/temp --params ./artefacts/temp/Trrust_Analysis/trrust_analysis.csv 
 
-- <u>stage</u>: trrust analysis (TRRUST)  
+- <u>stage</u>: functional analysis (Uniprot)  
 
-    cmi run trrust_analysis --artefacts ./artefacts/[directory_name] --params ./data/trrust_rawdata_human.tsv
+    cmi run functional_analysis --artefacts ./artefacts/[directory_name] transync_genes.csv signet_unique_gene_list.csv  
 
-    Eg: cmi run trrust_analysis --artefacts ./artefacts/temp --params ./data/trrust_rawdata_human.tsv 
+    Eg: cmi run functional_analysis --artefacts ./artefacts/temp transync_genes.csv signet_unique_gene_list.csv
