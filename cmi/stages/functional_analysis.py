@@ -47,8 +47,8 @@ def uniprot(artefacts_path, file):
     logger.info(f"Functional analysis started using: {artefacts_path, file}")
     file_path = artefacts_path + file
     file_name = str(file)
-    # file_name = file_name.split("/")
-    # file_name =file_name[2] or file
+    file_name = file_name.split("/")
+    file_name =file_name[2] or file
 
     genes = pd.read_csv(file_path)['Gene']
     jobs_ids = (get_jobs_ids(genes))
