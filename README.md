@@ -127,6 +127,6 @@ The starting cell population and terminal cell population cluster IDs to be ener
 
 - <u>stage</u>: functional analysis (Uniprot)  
 
-    cmi run functional_analysis --artefacts ./artefacts/[directory_name] transync_genes.csv signet_unique_gene_list.csv  
+    cmi run functional_analysis --artefacts ./artefacts/[directory_name] /Trrust_analysis/transsynw_genes.csv /Trrust_analysis/signet_genes.csv  
 
-    Eg: cmi run functional_analysis --artefacts ./artefacts/temp transync_genes.csv signet_unique_gene_list.csv
+    Eg: cmi run functional_analysis --artefacts ./artefacts/temp /Trrust_analysis/transsynw_genes.csv /Trrust_analysis/signet_genes.csv
