@@ -1,5 +1,6 @@
 
-![workflow badge](https://github.com/Avani7/Pipeline/actions/workflows/setup-test-workflow.yml/badge.svg)
+![workflow badge](https://github.com/thoughtworks/cell-reprogram-workflow/actions/workflows/setup-test-workflow.yml/badge.svg)
+
 
 ### CMI: Cellular conversion using Mechanistic driven Integrated workflow
 
