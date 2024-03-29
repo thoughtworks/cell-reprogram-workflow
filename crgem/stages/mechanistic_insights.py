@@ -1,7 +1,9 @@
-"generate_hypothesis.py"
+"mechanistic_insights.py"
 
 
-from cmi.tool.transsynw_tool import runTranssynW
+from crgem.tool.transsynw_tool import runTranssynW
+from crgem.tool.paga_tool import runPaga
+
 import logging
 
 logger = logging.getLogger(__name__)
@@ -11,8 +13,10 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 
-def generate_hypothesis(artefacts_path, *args):
-    logger.info(f"Generating hypothesis using: {args}")
+def mechanistic_insights(artefacts_path, *args):
+
+    logger.info(f"Obtaining mechanistic insights using: '{args}")
+
     STARTDATA=args[0]
     COMPLETEDATA=args[1]
     ANNOTATION=args[2]
@@ -20,15 +24,9 @@ def generate_hypothesis(artefacts_path, *args):
     EMAIL="default@gmail.com"
     SPECIES="Human"
     TEXT=args[1]+"::"+args[2]+"::"+args[0]
+    STARTPOP = args[4]
     ARTEFACTS_PATH=artefacts_path
-    
 
-    runTranssynW(STARTDATA,
-        COMPLETEDATA,
-        ANNOTATION,
-        "::"+TERPOP+"::",
-        EMAIL,
-        SPECIES,
-        TEXT,
-        ARTEFACTS_PATH+"/TransSynW")
-    
+    runTranssynW(STARTDATA, COMPLETEDATA, ANNOTATION, "::"+TERPOP+"::", EMAIL, SPECIES, TEXT, ARTEFACTS_PATH+"/TransSynW")
+    runPaga(STARTPOP, TERPOP, COMPLETEDATA, ANNOTATION, ARTEFACTS_PATH)
+

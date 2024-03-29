@@ -4,7 +4,7 @@ import os
 import shutil
 import glob
 import pandas as pd
-from cmi.stages.create_network import create_network #, get_TFs_data, get_targets_data, get_regulators, get_master_regulators
+from crgem.stages.create_network import create_network 
 
 
 artefacts_path = "./test_dump"

@@ -3,7 +3,7 @@
 import filecmp
 import os
 import shutil
-from cmi.stages.generate_hypothesis import generate_hypothesis
+from crgem.stages.generate_hypothesis import generate_hypothesis
 print(os.getcwd())
 args = ["start.txt","start_terminal.txt","annotation.txt","HPROGFPM"]
 artefacts_path = os.getcwd() + "/" + "./test_dump"

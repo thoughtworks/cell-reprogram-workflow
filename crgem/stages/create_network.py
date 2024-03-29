@@ -6,7 +6,7 @@ import os
 import json
 import requests
 import logging
-from cmi.common import clean_up
+from crgem.common import clean_up
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)

@@ -4,7 +4,7 @@ args= commandArgs(trailingOnly = TRUE)
 in_path = args[1]
 
 library(RcisTarget)
-source('./cmi/tool/Signet/SIGNET.R')
+source('./crgem/tool/Signet/SIGNET.R')
 
 # Select motif database to use (annotations)
 data("motifAnnotations_hgnc")

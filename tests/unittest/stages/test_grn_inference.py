@@ -4,7 +4,7 @@ import pytest
 import shutil
 import os
 import filecmp
-from cmi.stages.grn_inference import runR
+from crgem.stages.grn_inference import runR
 # from craft.common import clean_up
 
 artefacts_path = "./test_dump"

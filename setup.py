@@ -2,7 +2,7 @@
 from setuptools import setup, find_packages
 
 setup_info = dict(
-    name='CMI',
+    name='CRGEM',
     version='0.1',
     author='E4R',
     author_email='e4r@thoughtworks.com',
@@ -18,16 +18,16 @@ setup_info = dict(
     long_description_content_type='text/markdown',
     license='MIT',
     # Package info
-    packages=['cmi'] + ['cmi.' + pkg for pkg in find_packages('cmi')],
+    packages=['crgem'] + ['crgem.' + pkg for pkg in find_packages('crgem')],
     package_data={
-        "cmi.tool.Signet": ["*.R", "*.txt"],
-        "cmi.dependencies": ["transsynw/*/*", "SIGNET.py"]
+        "crgem.tool.Signet": ["*.R", "*.txt"],
+        "crgem.dependencies": ["transsynw/*/*", "SIGNET.py"]
 
     },
     # Add _ prefix to the names of temporary build dirs
     options={'build': {'build_base': '_build'}, },
     zip_safe=True,
-    scripts=['bin/cmi'],
+    scripts=['bin/crgem'],
     install_requires=[
     'anndata==0.10.3',
     'array-api-compat==1.4',

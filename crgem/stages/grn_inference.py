@@ -1,6 +1,6 @@
 "grn_inference.py"
 
-from cmi.tool.signet_tool import runSignetpy, runR
+from crgem.tool.signet_tool import runSignetpy, runR
 import logging
 
 logger = logging.getLogger(__name__)

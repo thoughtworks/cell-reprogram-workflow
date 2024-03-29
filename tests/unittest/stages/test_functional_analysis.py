@@ -4,8 +4,8 @@ import pytest
 import shutil
 import os
 import filecmp
-from cmi.stages.functional_analysis import functional_analysis
-from cmi.common import clean_up
+from crgem.stages.functional_analysis import functional_analysis
+from crgem.common import clean_up
 
 transsynw_genes_file = "/Trrust_Analysis/transsynw_genes.csv"
 signet_genes_file = "/Trrust_Analysis/signet_genes.csv"

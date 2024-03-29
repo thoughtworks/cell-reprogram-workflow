@@ -2,10 +2,10 @@
 ![workflow badge](https://github.com/thoughtworks/cell-reprogram-workflow/actions/workflows/setup-test-workflow.yml/badge.svg)
 
 
-### CMI: Cellular conversion using Mechanistic driven Integrated workflow
+### CRGEM: Cellular Reprogramming using mechanism-driven Gene Expression Modulation
 
 A framework created using already available tools and databases, to perform cellular reprogramming computationally. 
-To carry out tool specific task using the various tools available separately, the researchers need to go through the tools individually. CMI ease their work by integrating the tools at one place.
+To carry out tool specific task using the various tools available separately, the researchers need to go through the tools individually. CRGEM ease their work by integrating the tools at one place.
 With this integration of the functionalities researchers can invest time in biological inferences and experimentally verifying the key modulators and their effects.
 
 <hr>
@@ -91,43 +91,43 @@ The starting cell population and terminal cell population cluster IDs to be ener
 ### Commands
 - <u>stage</u>: all (TransSynW + PAGA + SIGNET + TRRUST + Cytoscape + Uniprot)  
 
-    cmi run all --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID] [startaing cell cluster ID] ./data/terminal.csv ./data/trrust_rawdata_human.tsv  
+    crgem run all --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID] [startaing cell cluster ID] ./data/terminal.csv ./data/trrust_rawdata_human.tsv  
 
-    Eg: cmi run all --artefacts ./artefacts/temp --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES ./data/terminal.csv ./data/trrust_rawdata_human.tsv
+    Eg: crgem run all --artefacts ./artefacts/temp --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES ./data/terminal.csv ./data/trrust_rawdata_human.tsv
 
 - <u>stage</u>: generate_hypothesis (TransSynW)  
 
-    cmi run generate_hypothesis --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID]
+    crgem run generate_hypothesis --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID]
 
-    Eg: cmi run generate_hypothesis --artefacts ./artefacts/[directory_name] --params start.txt start_terminal.txt annotation.txt HPROGFPM
+    Eg: crgem run generate_hypothesis --artefacts ./artefacts/[directory_name] --params start.txt start_terminal.txt annotation.txt HPROGFPM
 
 - <u>stage</u>: mechanistic insights (TransSynW + PAGA)  
 
-    cmi run mechanistic insights --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID] [startaing cell cluster ID]
+    crgem run mechanistic insights --artefacts ./artefacts/[directory_name] --params [start_cell population] [start and terminal_cell population] [annotation file] [terminal cell cluster ID] [startaing cell cluster ID]
 
-    Eg: cmi run mechanistic_insights --artefacts ./artefacts/temp --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES
+    Eg: crgem run mechanistic_insights --artefacts ./artefacts/temp --params start.txt start_terminal.txt annotation.txt HPROGFPM HNES
 
 - <u>stage</u>: grn inference (SIGNET)  
 
-    cmi run grn_inference --artefacts ./artefacts/[directory_name] --params ./data/terminal.csv  
+    crgem run grn_inference --artefacts ./artefacts/[directory_name] --params ./data/terminal.csv  
 
-    Eg: cmi run grn_inference --artefacts ./artefacts/temp --params ./data/terminal.csv
+    Eg: crgem run grn_inference --artefacts ./artefacts/temp --params ./data/terminal.csv
 
 - <u>stage</u>: trrust analysis (TRRUST)  
 
-    cmi run trrust_analysis --artefacts ./artefacts/[directory_name] --params ./data/trrust_rawdata_human.tsv
+    crgem run trrust_analysis --artefacts ./artefacts/[directory_name] --params ./data/trrust_rawdata_human.tsv
 
-    Eg: cmi run trrust_analysis --artefacts ./artefacts/temp --params ./data/trrust_rawdata_human.tsv 
+    Eg: crgem run trrust_analysis --artefacts ./artefacts/temp --params ./data/trrust_rawdata_human.tsv 
 
 
 - <u>stage</u>: gene network (Cytoscape)  
 
-    cmi run create_network --artefacts ./artefacts/[directory_name] --params ./artefacts/[directory_name]/Trrust_Analysis/trrust_analysis.csv
+    crgem run create_network --artefacts ./artefacts/[directory_name] --params ./artefacts/[directory_name]/Trrust_Analysis/trrust_analysis.csv
 
-    Eg: cmi run create_network --artefacts ./artefacts/temp --params ./artefacts/temp/Trrust_Analysis/trrust_analysis.csv 
+    Eg: crgem run create_network --artefacts ./artefacts/temp --params ./artefacts/temp/Trrust_Analysis/trrust_analysis.csv 
 
 - <u>stage</u>: functional analysis (Uniprot)  
 
-    cmi run functional_analysis --artefacts ./artefacts/[directory_name] /Trrust_analysis/transsynw_genes.csv /Trrust_analysis/signet_genes.csv  
+    crgem run functional_analysis --artefacts ./artefacts/[directory_name] /Trrust_analysis/transsynw_genes.csv /Trrust_analysis/signet_genes.csv  
 
-    Eg: cmi run functional_analysis --artefacts ./artefacts/temp /Trrust_analysis/transsynw_genes.csv /Trrust_analysis/signet_genes.csv
+    Eg: crgem run functional_analysis --artefacts ./artefacts/temp /Trrust_analysis/transsynw_genes.csv /Trrust_analysis/signet_genes.csv

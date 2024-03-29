@@ -3,7 +3,7 @@
 import subprocess
 import os
 import sys
-from cmi.common import clean_up
+from crgem.common import clean_up
 
 # from dependencies.Signet.SIGNET import signet
 code_path = './Signet'

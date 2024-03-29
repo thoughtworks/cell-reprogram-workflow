@@ -4,7 +4,7 @@ import logging
 import subprocess
 import os
 import sys
-from cmi.common import clean_up
+from crgem.common import clean_up
 cwd = os.getcwd()
 print("cwd:", cwd)
 abs_path = os.path.dirname(__file__)

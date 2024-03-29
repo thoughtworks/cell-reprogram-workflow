@@ -3,8 +3,8 @@
 import os
 import logging
 import pandas as pd
-from cmi.common import clean_up
-from cmi.common import http_post, http_request
+from crgem.common import clean_up
+from crgem.common import http_post, http_request
 
 
 logger = logging.getLogger(__name__)

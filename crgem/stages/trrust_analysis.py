@@ -2,7 +2,7 @@
 import pandas as pd
 import numpy as np
 import os
-from cmi.common import clean_up
+from crgem.common import clean_up
 import logging
 
 

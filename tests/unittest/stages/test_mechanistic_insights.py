@@ -4,7 +4,7 @@ import filecmp
 import os
 import shutil
 import glob
-from cmi.stages.mechanistic_insights import mechanistic_insights
+from crgem.stages.mechanistic_insights import mechanistic_insights
 
 args = ["start.txt","start_terminal.txt","annotation.txt","HPROGFPM", "HNES"]
 artefacts_path = os.getcwd() + "/" +  "./test_dump"
