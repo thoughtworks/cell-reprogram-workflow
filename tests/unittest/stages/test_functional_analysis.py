@@ -11,7 +11,7 @@ transsynw_genes_file = "/Trrust_Analysis/transsynw_genes.csv"
 signet_genes_file = "/Trrust_Analysis/signet_genes.csv"
 
 artefacts_path = "./test_dump"
-source_artefacts_path = "./tests/example"
+source_artefacts_path = "./tests/artefacts"
 
 def copy_dependencies():
 
